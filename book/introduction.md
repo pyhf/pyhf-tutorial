@@ -117,7 +117,7 @@ The 'minuit' extra installs [`iminuit`](https://iminuit.readthedocs.io/).
 ````
 
 
-See our [installation docs](https://pyhf.readthedocs.io/en/v0.6.0/installation.html) for more information about installation options.
+See our [installation docs](https://pyhf.readthedocs.io/en/v0.6.1/installation.html) for more information about installation options.
 
 ### Dependencies for this tutorial
 
