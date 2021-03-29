@@ -2,8 +2,8 @@ name: Deploy Jupyter Book
 
 on:
   push:
-    branches:
-    - main
+    # branches:
+    # - main
   pull_request:
   workflow_dispatch:
 
