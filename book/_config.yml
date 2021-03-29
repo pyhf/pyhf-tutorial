@@ -1,0 +1,28 @@
+# https://jupyterbook.org/customize/config.html
+# Book settings
+title: 'LHC Reinterpretation Forum Workshop 2021 pyhf Tutorial'
+author: the pyhf development team
+logo: assets/logo.png
+
+# HTML-specific settings
+html:
+  use_repository_button: true
+  navbar_number_sections: true
+  use_issues_button: true
+  use_edit_page_button: true
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/pyhf/tutorial-Reinterpretation-Forum-2021
+  path_to_book: book
+  branch: main
+
+# Launch button settings
+launch_buttons:
+  notebook_interface: jupyterlab
+  binderhub_url: https://mybinder.org
+  colab_url: https://colab.research.google.com
+
+latex:
+  latex_documents:
+    targetname: book.tex
