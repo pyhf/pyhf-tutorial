@@ -1,6 +1,6 @@
 # https://jupyterbook.org/customize/config.html
 # Book settings
-title: 'LHC Reinterpretation Forum Workshop 2021 pyhf Tutorial'
+title: 'pyhf Tutorial'
 author: the pyhf development team
 logo: assets/logo.png
 

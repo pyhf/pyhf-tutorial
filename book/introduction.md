@@ -1,4 +1,4 @@
-# [LHC Reinterpretation Forum Workshop 2021 `pyhf` Tutorial](https://indico.cern.ch/event/982553/contributions/4219487/)
+# `pyhf` Tutorial
 
 ## Welcome!
 
@@ -6,7 +6,7 @@
 <a href="https://github.com/scikit-hep/pyhf"><img src="https://raw.githubusercontent.com/scikit-hep/pyhf/master/docs/_static/img/pyhf-logo-small.png"></a>
 </p>
 
-Welcome to the `pyhf` tutorial given at the [LHC Reinterpretation Forum Workshop 2021](https://indico.cern.ch/event/982553)!
+Welcome to the `pyhf` tutorial!
 We'll first point you towards our documentation website ([pyhf.readthedocs.io/](https://pyhf.readthedocs.io/)) and recommend that you visit it for much more detailed explanations and examples.
 Let's dive right in.
 
