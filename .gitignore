@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# build artifacts
+_build
+*.tar.gz
+book/data/
+book/1Lbb-likelihoods/
