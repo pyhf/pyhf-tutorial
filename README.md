@@ -29,3 +29,4 @@ make build
 ## Past tutorials
 
 - [LHC Reinterpretation Forum Workshop 2021](https://indico.cern.ch/event/982553/contributions/4219487/)
+   - [![Zenodo DOI](https://zenodo.org/badge/339543089.svg)](https://zenodo.org/badge/latestdoi/339543089)
