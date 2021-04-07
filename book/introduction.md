@@ -127,6 +127,12 @@ To get all the dependencies needed for this tutorial you can just install from t
 (pyhf-tutorial) $ python -m pip install -r binder/requirements.txt
 ```
 
+If you want to also get the dependencies to build and explore the Jupyter Book form of the tutorial you can install them with
+
+```
+(pyhf-tutorial) $ python -m pip install -r book/requirements.txt
+```
+
 ### Statistics References
 
 For more information about some of the theoretical topics covered with `pyhf`, see Kyle Cranmer's [Statistics and Data Science](https://cranmer.github.io/stats-ds-book/intro.html) book.
