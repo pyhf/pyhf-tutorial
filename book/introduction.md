@@ -133,6 +133,36 @@ If you want to also get the dependencies to build and explore the Jupyter Book f
 (pyhf-tutorial) $ python -m pip install -r book/requirements.txt
 ```
 
+### Citation
+
+`pyhf` `v0.6.0` and later makes it very easy to get the proper citation for the version of the library that you're using! Simply ask the CLI API to get the properly formatted BibTeX references.
+
+```
+(pyhf-tutorial) $ pyhf --citation
+@software{pyhf,
+  author = {Lukas Heinrich and Matthew Feickert and Giordon Stark},
+  title = "{pyhf: v0.6.1}",
+  version = {0.6.1},
+  doi = {10.5281/zenodo.1169739},
+  url = {https://github.com/scikit-hep/pyhf},
+}
+
+@article{pyhf_joss,
+  doi = {10.21105/joss.02823},
+  url = {https://doi.org/10.21105/joss.02823},
+  year = {2021},
+  publisher = {The Open Journal},
+  volume = {6},
+  number = {58},
+  pages = {2823},
+  author = {Lukas Heinrich and Matthew Feickert and Giordon Stark and Kyle Cranmer},
+  title = {pyhf: pure-Python implementation of HistFactory statistical models},
+  journal = {Journal of Open Source Software}
+}
+```
+
+Alternatively, [check the website](https://pyhf.readthedocs.io/en/v0.6.1/citations.html).
+
 ### Statistics References
 
 For more information about some of the theoretical topics covered with `pyhf`, see Kyle Cranmer's [Statistics and Data Science](https://cranmer.github.io/stats-ds-book/intro.html) book.
