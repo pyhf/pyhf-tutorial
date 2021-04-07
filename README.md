@@ -1,6 +1,6 @@
 # `pyhf` Tutorial
 
-[![DOI](https://zenodo.org/badge/352542876.svg)](https://zenodo.org/badge/latestdoi/352542876)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4670321.svg)](https://doi.org/10.5281/zenodo.4670321)
 
 Tutorial last given at the [April 2021 PyHEP topical meeting](https://indico.cern.ch/event/985425/).
 
