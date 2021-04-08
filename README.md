@@ -8,8 +8,6 @@ Tutorial last given at the [April 2021 PyHEP topical meeting](https://indico.cer
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main/?urlpath=lab)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4670321.svg)](https://doi.org/10.5281/zenodo.4670321)
 
-https://mybinder.org/v2/zenodo/10.5281/zenodo.4670322/?urlpath=lab
-
 ## Setup
 
 In a Python virtual environment run the following
