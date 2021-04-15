@@ -28,4 +28,6 @@ make build
 ## Past tutorials
 
 - [LHC Reinterpretation Forum Workshop 2021](https://indico.cern.ch/event/982553/contributions/4219487/)
-   - [![Zenodo DOI](https://zenodo.org/badge/339543089.svg)](https://zenodo.org/badge/latestdoi/339543089)
+   - [![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4549428.svg)](https://doi.org/10.5281/zenodo.4549428)
+- [PyHEP 2020 tutorial](https://indico.cern.ch/event/882824/contributions/3931292/)
+   - [![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4152916.svg)](https://doi.org/10.5281/zenodo.4152916)
