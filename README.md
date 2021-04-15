@@ -27,7 +27,8 @@ make build
 
 ## Past tutorials
 
-- [LHC Reinterpretation Forum Workshop 2021](https://indico.cern.ch/event/982553/contributions/4219487/)
+* [LHC Reinterpretation Forum Workshop 2021](https://indico.cern.ch/event/982553/contributions/4219487/) (2021-02-18)
    - [![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4549428.svg)](https://doi.org/10.5281/zenodo.4549428)
-- [PyHEP 2020](https://indico.cern.ch/event/882824/contributions/3931292/)
+* [ATLAS Exotics + SUSY Workshop 2020](https://indico.cern.ch/event/898965/sessions/355806/) (2020-09-25)
+* [PyHEP 2020](https://indico.cern.ch/event/882824/contributions/3931292/) (2020-07-16)
    - [![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4152916.svg)](https://doi.org/10.5281/zenodo.4152916)
