@@ -59,6 +59,7 @@ First we need to set up the 'views' with the right paths to ensure we use the co
 $ export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 $ source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
 $ lsetup "views LCG_96bpython3 x86_64-slc6-gcc8-opt"
+$ lsetup "views LCG_98python3 x86_64-centos7-gcc8-opt"
 $ export PYTHONPATH=/cvmfs/sft.cern.ch/lcg/views/LCG_96bpython3/x86_64-slc6-gcc8-opt/python:/cvmfs/sft.cern.ch/lcg/views/LCG_96bpython3/x86_64-slc6-gcc8-opt/lib
 ```
 
