@@ -144,7 +144,8 @@ If you want to also get the dependencies to build and explore the Jupyter Book f
   title = "{pyhf: v0.6.2}",
   version = {0.6.2},
   doi = {10.5281/zenodo.1169739},
-  url = {https://github.com/scikit-hep/pyhf},
+  url = {https://doi.org/10.5281/zenodo.1169739},
+  note = {https://github.com/scikit-hep/pyhf/releases/tag/v0.6.2}
 }
 
 @article{pyhf_joss,
