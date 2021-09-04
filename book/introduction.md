@@ -117,7 +117,7 @@ The 'minuit' extra installs [`iminuit`](https://iminuit.readthedocs.io/).
 ````
 
 
-See our [installation docs](https://pyhf.readthedocs.io/en/v0.6.2/installation.html) for more information about installation options.
+See our [installation docs](https://pyhf.readthedocs.io/en/v0.6.3/installation.html) for more information about installation options.
 
 ### Dependencies for this tutorial
 
@@ -141,11 +141,11 @@ If you want to also get the dependencies to build and explore the Jupyter Book f
 (pyhf-tutorial) $ pyhf --citation
 @software{pyhf,
   author = {Lukas Heinrich and Matthew Feickert and Giordon Stark},
-  title = "{pyhf: v0.6.2}",
-  version = {0.6.2},
+  title = "{pyhf: v0.6.3}",
+  version = {0.6.3},
   doi = {10.5281/zenodo.1169739},
   url = {https://doi.org/10.5281/zenodo.1169739},
-  note = {https://github.com/scikit-hep/pyhf/releases/tag/v0.6.2}
+  note = {https://github.com/scikit-hep/pyhf/releases/tag/v0.6.3}
 }
 
 @article{pyhf_joss,
@@ -162,7 +162,7 @@ If you want to also get the dependencies to build and explore the Jupyter Book f
 }
 ```
 
-Alternatively, [check the website](https://pyhf.readthedocs.io/en/v0.6.2/citations.html).
+Alternatively, [check the website](https://pyhf.readthedocs.io/en/v0.6.3/citations.html).
 
 ### Statistics References
 
