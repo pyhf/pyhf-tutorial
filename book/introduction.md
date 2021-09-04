@@ -97,7 +97,7 @@ If you're installing from PyPI, you can also install with some of the "extras" t
 (pyhf-tutorial) $ python -m pip install pyhf[xmlio]
 ```
 
-The 'xmlio' extra additionally installs [`uproot`](https://github.com/scikit-hep/uproot) to read `ROOT` files.
+The 'xmlio' extra additionally installs [`uproot`](https://github.com/scikit-hep/uproot4) to read `ROOT` files.
 ````
 
 ````{tabbed} Use PyTorch and Tensorflow
