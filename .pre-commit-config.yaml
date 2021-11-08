@@ -24,7 +24,7 @@ repos:
 -   repo: https://github.com/psf/black
     rev: 21.10b0
     hooks:
-    - id: black
+    - id: black-jupyter
 
 -   repo: https://github.com/nbQA-dev/nbQA
     rev: 1.1.1
@@ -33,5 +33,3 @@ repos:
       additional_dependencies: [pyupgrade==2.29.0]
     - id: nbqa-isort
       additional_dependencies: [isort==5.10.0]
-    - id: nbqa-black
-      additional_dependencies: [black==21.10b0]
