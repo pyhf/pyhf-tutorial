@@ -11,23 +11,15 @@ jobs:
 
   deploy-book:
     runs-on: ubuntu-latest
+    container: atlasamglab/stats-base:root6.24.06
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Get Conda and Python
-      uses: "conda-incubator/setup-miniconda@v2"
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
       with:
-        python-version: "3.9"
-        mamba-version: "*"
-        channels: "conda-forge"
-        channel-priority: true
-
-    - name: Install ROOT
-      run: |
-        mamba env list
-        mamba install root
-        mamba list
+        python-version: 3.9
 
     - name: Install Python dependencies
       run: |
@@ -39,14 +31,8 @@ jobs:
       run: |
         python -m pip list
 
-    - name: List installed Conda packages
-      run: |
-        mamba env list
-        mamba list
-
     - name: Build the book
       run: |
-        mamba activate base
         jupyter-book build book/
 
     - name: Deploy Jupyter book to GitHub pages
