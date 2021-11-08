@@ -35,9 +35,14 @@ jobs:
         python -m pip --no-cache-dir install -r binder/requirements.txt
         python -m pip --no-cache-dir install -r book/requirements.txt
 
-    - name: List installed Python dependencies
+    - name: List installed Python packages
       run: |
         python -m pip list
+
+    - name: List installed Conda packages
+      run: |
+        mamba env list
+        mamba list
 
     - name: Build the book
       run: |
