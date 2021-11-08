@@ -18,9 +18,16 @@ jobs:
     - name: Get Conda and Python
       uses: "conda-incubator/setup-miniconda@v2"
       with:
-        auto-update-conda: true
         python-version: "3.9"
+        mamba-version: "*"
         channels: "conda-forge"
+        channel-priority: true
+
+    - name: Install ROOT
+      run: |
+        mamba env list
+        mamba install root
+        mamba list
 
     - name: Install Python dependencies
       run: |
@@ -28,16 +35,9 @@ jobs:
         python -m pip --no-cache-dir install -r binder/requirements.txt
         python -m pip --no-cache-dir install -r book/requirements.txt
 
-    - name: Install ROOT
-      run: |
-        conda env list
-        conda install root
-        conda list
-
-    - name: List dependencies
+    - name: List installed Python dependencies
       run: |
         python -m pip list
-        conda list
 
     - name: Build the book
       run: |
