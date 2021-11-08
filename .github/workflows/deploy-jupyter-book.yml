@@ -15,16 +15,29 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+    - name: Get Conda and Python
+      uses: "conda-incubator/setup-miniconda@v2"
       with:
-        python-version: 3.9
+        auto-update-conda: true
+        python-version: "3.9"
+        channels: "conda-forge"
 
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip setuptools wheel
         python -m pip --no-cache-dir install -r binder/requirements.txt
         python -m pip --no-cache-dir install -r book/requirements.txt
+
+    - name: Install ROOT
+      run: |
+        conda env list
+        conda install root
+        conda list
+
+    - name: List dependencies
+      run: |
+        python -m pip list
+        conda list
 
     - name: Build the book
       run: |
