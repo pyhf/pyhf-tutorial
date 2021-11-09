@@ -11,6 +11,7 @@ jobs:
 
   deploy-book:
     runs-on: ubuntu-latest
+    container: atlasamglab/stats-base:root6.24.06
 
     steps:
     - uses: actions/checkout@v2
@@ -20,11 +21,15 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip setuptools wheel
         python -m pip --no-cache-dir install -r binder/requirements.txt
         python -m pip --no-cache-dir install -r book/requirements.txt
+
+    - name: List installed Python packages
+      run: |
+        python -m pip list
 
     - name: Build the book
       run: |
