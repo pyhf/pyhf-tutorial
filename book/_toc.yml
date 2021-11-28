@@ -1,25 +1,26 @@
 # https://jupyterbook.org/customize/toc.html
-- file: introduction
-
-- part: Get started
+format: jb-book
+root: introduction
+parts:
+- caption: Get started
   chapters:
   - file: HelloWorld
   - file: SimpleWorkspace
   - file: SerializationAndPatching
 
-- part: Common use and applications
+- caption: Common use and applications
   chapters:
-    - file: PullPlot
-    - file: Toys
-    - file: Combinations
+  - file: PullPlot
+  - file: Toys
+  - file: Combinations
 
-- part: More Information
+- caption: More Information
   chapters:
-    - file: IntroToHiFa
-    - file: WorkspaceManipulations
-    - file: Modifiers
-    - file: UsingCalculators
+  - file: IntroToHiFa
+  - file: WorkspaceManipulations
+  - file: Modifiers
+  - file: UsingCalculators
 
-- part: Learn Fundamentals
+- caption: Learn Fundamentals
   chapters:
   - file: InterpolationCodes
