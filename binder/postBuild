@@ -8,4 +8,4 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 
 # Use mamba to speed up install
-conda install root
+mamba install root
