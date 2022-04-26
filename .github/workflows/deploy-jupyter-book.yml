@@ -36,6 +36,7 @@ jobs:
         jupyter-book build book/
 
     - name: Deploy Jupyter book to GitHub pages
+      # Deploy either on push events (merged PRs) or workflow dispatch triggers
       if: success() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
