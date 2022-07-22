@@ -1,0 +1,1135 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workspace Manipulations &#8212; pyhf Tutorial</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modifiers" href="Modifiers.html" />
+    <link rel="prev" title="HistFactory" href="IntroToHiFa.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">pyhf Tutorial</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   pyhf Tutorial
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HelloWorld.html">
+   Introduction to HistFactory Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SimpleWorkspace.html">
+   Introduction to Workspaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SerializationAndPatching.html">
+   Using HEPData
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Common use and applications
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PullPlot.html">
+   Making a Pull Plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Toys.html">
+   Playing with Toys
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Combinations.html">
+   Performing a Combination
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More Information
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IntroToHiFa.html">
+   HistFactory
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Workspace Manipulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modifiers.html">
+   Modifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UsingCalculators.html">
+   Using Calculators
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learn Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="InterpolationCodes.html">
+   Piecewise Linear Interpolation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/WorkspaceManipulations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/pyhf/pyhf-tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/pyhf/pyhf-tutorial/issues/new?title=Issue%20on%20page%20%2FWorkspaceManipulations.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/pyhf/pyhf-tutorial/edit/main/book/WorkspaceManipulations.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main?urlpath=lab/tree/book/WorkspaceManipulations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/pyhf/pyhf-tutorial/blob/main/book/WorkspaceManipulations.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-the-xml-root">
+   Getting the XML+ROOT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#xml-to-json">
+   XML to JSON
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#via-the-command-line">
+     via the command line
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#via-the-python-interface">
+     via the python interface
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workspace-inspection">
+   Workspace Inspection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalizing-a-workspace">
+   “Normalizing” a Workspace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-a-digest">
+   Computing a digest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pruning-away-items">
+   “Pruning” away items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-channels">
+     prune channels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-samples">
+     prune samples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-modifiers">
+     prune modifiers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-modifier-types">
+     prune modifier types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#renaming-items">
+   Renaming items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-channels">
+     rename channels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-samples">
+     rename samples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-modifiers">
+     rename modifiers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-measurements">
+     rename measurements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Workspace Manipulations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-the-xml-root">
+   Getting the XML+ROOT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#xml-to-json">
+   XML to JSON
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#via-the-command-line">
+     via the command line
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#via-the-python-interface">
+     via the python interface
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workspace-inspection">
+   Workspace Inspection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalizing-a-workspace">
+   “Normalizing” a Workspace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-a-digest">
+   Computing a digest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pruning-away-items">
+   “Pruning” away items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-channels">
+     prune channels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-samples">
+     prune samples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-modifiers">
+     prune modifiers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prune-modifier-types">
+     prune modifier types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#renaming-items">
+   Renaming items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-channels">
+     rename channels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-samples">
+     rename samples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-modifiers">
+     rename modifiers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rename-measurements">
+     rename measurements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="workspace-manipulations">
+<h1>Workspace Manipulations<a class="headerlink" href="#workspace-manipulations" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter, you will learn about various workspace manipulations including how to convert from HistFactory XML+ROOT workspaces to pyhf. We’ll cover some common pitfalls such as locations of root files, and being able to set the base path for the conversion.</p>
+<div class="section" id="getting-the-xml-root">
+<h2>Getting the XML+ROOT<a class="headerlink" href="#getting-the-xml-root" title="Permalink to this headline">¶</a></h2>
+<p>Note, getting the XML+ROOT won’t necessarily be covered as part of the tutorial as it requires ROOT (though ROOT is installed in the Binder instance).</p>
+<p>If you want to practice extracting out the HistFactory files from the workspace, first create the workspace like so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need to be in the directory containing config directory</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">chdir</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">_top_level_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
+<span class="n">chdir</span><span class="p">(</span><span class="n">_top_level_dir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;multichannel_histfactory&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> hist2workspace config/example.xml
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[#2] INFO:HistFactory -- hist2workspace is less verbose now. Use -v and -vv for more details.
+
+[#2] PROGRESS:HistFactory -- Getting histogram ./data/data.root:/signal_data
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[#2] PROGRESS:HistFactory -- Getting histogram ./data/data.root:/signal_signal
+[#2] PROGRESS:HistFactory -- Getting histogram ./data/data.root:/signal_bkg
+[#2] PROGRESS:HistFactory -- Getting histogram ./data/data.root:/signal_bkgerr
+[#2] PROGRESS:HistFactory -- Getting histogram ./data/data.root:/control_data
+[#2] PROGRESS:HistFactory -- Getting histogram ./data/data.root:/control_bkg
+[#2] PROGRESS:HistFactory -- Getting histogram ./data/data.root:/control_bkgerr
+[#2] PROGRESS:HistFactory -- Starting to process channel: channel1
+[#2] PROGRESS:HistFactory -- 
+-----------------------------------------
+	Starting to process &#39;channel1&#39; channel with 1 observables
+-----------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[#2] WARNING:HistFactory -- Const attribute to &lt;NormFactor&gt; tag is deprecated, will ignore. Instead, add 
+	&lt;ParamSetting Const=&quot;True&quot;&gt;SigXsecOverSM&lt;/ParamSetting&gt;
+ to your top-level XML&#39;s &lt;Measurment&gt; entry
+[#2] PROGRESS:HistFactory -- 
+-----------------------------------------
+	import model into workspace
+-----------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[#2] PROGRESS:HistFactory -- Writing sample: signal
+[#2] PROGRESS:HistFactory -- Writing sample: bkg
+[#2] PROGRESS:HistFactory -- Saved all histograms
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[#2] PROGRESS:HistFactory -- Saved Measurement
+[#2] PROGRESS:HistFactory -- Successfully wrote channel to file
+[#2] PROGRESS:HistFactory -- Starting to process channel: channel2
+[#2] PROGRESS:HistFactory -- 
+-----------------------------------------
+	Starting to process &#39;channel2&#39; channel with 1 observables
+-----------------------------------------
+
+[#2] PROGRESS:HistFactory -- 
+-----------------------------------------
+	import model into workspace
+-----------------------------------------
+
+WARNING: Can&#39;t find parameter of interest: SigXsecOverSM in Workspace. Not setting in ModelConfig.
+[#2] PROGRESS:HistFactory -- Writing sample: bkg
+[#2] PROGRESS:HistFactory -- Saved all histograms
+[#2] PROGRESS:HistFactory -- Saved Measurement
+[#2] PROGRESS:HistFactory -- Successfully wrote channel to file
+[#2] PROGRESS:HistFactory -- 
+-----------------------------------------
+	Entering combination
+-----------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[#2] PROGRESS:HistFactory -- 
+-----------------------------------------
+	create toy data for channelCat[channel1,channel2]
+-----------------------------------------
+
+[#2] PROGRESS:HistFactory -- Merging data for channel channel1
+[#2] PROGRESS:HistFactory -- Merging data for channel channel2
+[#2] PROGRESS:HistFactory -- 
+-----------------------------------------
+	Importing combined model
+-----------------------------------------
+
+[#2] PROGRESS:HistFactory -- Writing combined workspace to file: ./results/example_combined_GaussExample_model.root
+[#2] PROGRESS:HistFactory -- Writing combined measurement to file: ./results/example_combined_GaussExample_model.root
+[#2] PROGRESS:HistFactory -- Writing sample: signal
+[#2] PROGRESS:HistFactory -- Writing sample: bkg
+[#2] PROGRESS:HistFactory -- Writing sample: bkg
+[#2] PROGRESS:HistFactory -- Saved all histograms
+[#2] PROGRESS:HistFactory -- Saved Measurement
+</pre></div>
+</div>
+</div>
+</div>
+<p>and you’ll notice a few new files being made!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -lhF results/
+total 136K
+-rw-r--r-- 1 jovyan jovyan 40K Nov  8 21:01 example_channel1_GaussExample_model.root
+-rw-r--r-- 1 jovyan jovyan 38K Nov  8 21:01 example_channel2_GaussExample_model.root
+-rw-r--r-- 1 jovyan jovyan 47K Nov  8 21:01 example_combined_GaussExample_model.root
+-rw-r--r-- 1 jovyan jovyan 503 Nov  8 21:01 example_GaussExample.root
+-rw-r--r-- 1 jovyan jovyan  26 Nov  8 21:01 example_results.table
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> ls -lhF results/
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 136K
+-rw-r--r-- 1 root root 503 Jul 22 05:24 example_GaussExample.root
+-rw-r--r-- 1 root root 40K Jul 22 05:24 example_channel1_GaussExample_model.root
+-rw-r--r-- 1 root root 38K Jul 22 05:24 example_channel2_GaussExample_model.root
+-rw-r--r-- 1 root root 47K Jul 22 05:24 example_combined_GaussExample_model.root
+-rw-r--r-- 1 root root  26 Jul 22 05:24 example_results.table
+</pre></div>
+</div>
+</div>
+</div>
+<p>In particular, <code class="docutils literal notranslate"><span class="pre">example_combined_GaussExample_model.root</span></code> is the file that contains the <code class="docutils literal notranslate"><span class="pre">RooStats::HistFactory::Measurement</span></code> object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ root results/example_combined_GaussExample_model.root 
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.18/04                  https://root.cern |
+  |                               (c) 1995-2019, The ROOT Team |
+  | Built for macosx64 on Sep 11 2019, 15:38:23                |
+  | From tags/v6-18-04@v6-18-04                                |
+  | Try &#39;.help&#39;, &#39;.demo&#39;, &#39;.license&#39;, &#39;.credits&#39;, &#39;.quit&#39;/&#39;.q&#39; |
+   ------------------------------------------------------------
+
+root [0] 
+Attaching file results/example_combined_GaussExample_model.root as _file0...
+
+RooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby 
+                Copyright (C) 2000-2013 NIKHEF, University of California &amp; Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+(TFile *) 0x7ffaa30d2130
+root [1] .ls
+TFile**		results/example_combined_GaussExample_model.root	
+ TFile*		results/example_combined_GaussExample_model.root	
+  KEY: RooWorkspace	combined;1	combined
+  KEY: TProcessID	ProcessID0;1	e1e9272e-fddb-11ea-86b3-1556a8c0beef
+  KEY: TDirectoryFile	channel1_hists;1	channel1_hists
+  KEY: TDirectoryFile	channel2_hists;1	channel2_hists
+  KEY: RooStats::HistFactory::Measurement	GaussExample;1
+</pre></div>
+</div>
+<p>from which you can extract out the necessary XML files as well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">GaussExample</span><span class="o">-&gt;</span><span class="n">PrintXML</span><span class="p">()</span>
+<span class="n">Printing</span> <span class="n">XML</span> <span class="n">Files</span> <span class="k">for</span> <span class="n">measurement</span><span class="p">:</span> <span class="n">GaussExample</span>
+<span class="n">Printing</span> <span class="n">XML</span> <span class="n">Files</span> <span class="k">for</span> <span class="n">channel</span><span class="p">:</span> <span class="n">channel1</span>
+<span class="n">Finished</span> <span class="n">printing</span> <span class="n">XML</span> <span class="n">files</span>
+<span class="n">Printing</span> <span class="n">XML</span> <span class="n">Files</span> <span class="k">for</span> <span class="n">channel</span><span class="p">:</span> <span class="n">channel2</span>
+<span class="n">Finished</span> <span class="n">printing</span> <span class="n">XML</span> <span class="n">files</span>
+<span class="n">Finished</span> <span class="n">printing</span> <span class="n">XML</span> <span class="n">files</span>
+</pre></div>
+</div>
+<p>To do this programatically, you can either write a <code class="docutils literal notranslate"><span class="pre">ROOT</span></code> macro</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// printXML.C</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">printXML</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">TFile</span><span class="o">*</span><span class="w"> </span><span class="n">_file0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TFile</span><span class="o">::</span><span class="n">Open</span><span class="p">(</span><span class="s">&quot;results/example_combined_GaussExample_model.root&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">_file0</span><span class="o">-&gt;</span><span class="n">Get</span><span class="o">&lt;</span><span class="n">RooStats</span><span class="o">::</span><span class="n">HistFactory</span><span class="o">::</span><span class="n">Measurement</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;GaussExample&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">PrintXML</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and run it</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>root -l -b -q printXML.C
+</pre></div>
+</div>
+<p>but we can also do the same with PyROOT in as many lines</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ROOT</span>
+
+<span class="n">_file0</span> <span class="o">=</span> <span class="n">ROOT</span><span class="o">.</span><span class="n">TFile</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s2">&quot;results/example_combined_GaussExample_model.root&quot;</span><span class="p">)</span>
+<span class="n">_file0</span><span class="o">.</span><span class="n">GaussExample</span><span class="o">.</span><span class="n">PrintXML</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">File</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cppyy</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">60</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">60</span>     <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">libcppyy_mod_name</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/importlib/__init__.py:126,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="ne">--&gt; </span><span class="mi">126</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1050,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1027,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1004,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;libcppyy3_10&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">ROOT</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">_file0</span> <span class="o">=</span> <span class="n">ROOT</span><span class="o">.</span><span class="n">TFile</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s2">&quot;results/example_combined_GaussExample_model.root&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">_file0</span><span class="o">.</span><span class="n">GaussExample</span><span class="o">.</span><span class="n">PrintXML</span><span class="p">()</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># Prevent cppyy from filtering ROOT libraries</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CPPYY_NO_ROOT_FILTER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+<span class="ne">---&gt; </span><span class="mi">22</span> <span class="kn">import</span> <span class="nn">cppyy</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">if</span> <span class="ow">not</span> <span class="s1">&#39;ROOTSYS&#39;</span> <span class="ow">in</span> <span class="n">environ</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="c1"># Revert setting made by cppyy</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">cppyy</span><span class="o">.</span><span class="n">gbl</span><span class="o">.</span><span class="n">gROOT</span><span class="o">.</span><span class="n">SetBatch</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cppyy</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">62</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">libcppyy_mod_name</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">62</span>     <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span>             <span class="s1">&#39;Failed to import </span><span class="si">{}</span><span class="s1">. Please check that ROOT has been built for Python </span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span>                 <span class="n">libcppyy_mod_name</span><span class="p">,</span> <span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span> <span class="c1"># ensure &#39;import libcppyy&#39; will find the versioned module</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;libcppyy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">libcppyy_mod_name</span><span class="p">]</span>
+
+<span class="ne">ImportError</span>: Failed to import libcppyy3_10. Please check that ROOT has been built for Python 3.10
+</pre></div>
+</div>
+</div>
+</div>
+<p>which dumps them into the same directory you ran from:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -lhF
+total 24K
+drwxr-xr-x 2 jovyan jovyan 4.0K Nov  8 19:52 config/
+drwxr-xr-x 2 jovyan jovyan 4.0K Nov  8 19:52 data/
+-rw-r--r-- 1 jovyan jovyan 1.1K Nov  8 21:01 GaussExample_channel1.xml
+-rw-r--r-- 1 jovyan jovyan  794 Nov  8 21:01 GaussExample_channel2.xml
+-rw-r--r-- 1 jovyan jovyan  459 Nov  8 21:01 GaussExample.xml
+drwxr-xr-x 2 jovyan jovyan 4.0K Nov  8 21:01 results/
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> ls -lhF
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chdir</span><span class="p">(</span><span class="n">_top_level_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="xml-to-json">
+<h2>XML to JSON<a class="headerlink" href="#xml-to-json" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="via-the-command-line">
+<h3>via the command line<a class="headerlink" href="#via-the-command-line" title="Permalink to this headline">¶</a></h3>
+<p>So pyhf comes with a lot of nifty utilities you can access. The documentation for the command line can be found via <code class="docutils literal notranslate"><span class="pre">pyhf</span> <span class="pre">--help</span></code> or <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/cli.html">online</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf --help
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s focus for now on <code class="docutils literal notranslate"><span class="pre">pyhf</span> <span class="pre">xml2json</span></code> which requires that you have installed <code class="docutils literal notranslate"><span class="pre">pyhf[xmlio]</span></code> (pyhf with the xmlio option).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pyhf</span><span class="p">[</span><span class="n">xmlio</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Again, the online documentation for this option is found <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/cli.html#pyhf-xml2json">here</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf xml2json --help
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s remind ourselves of what the top-level XML file looks like, as this is the <code class="docutils literal notranslate"><span class="pre">ENTRYPOINT_XML</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> tail -n +15 data/multichannel_histfactory/config/example.xml <span class="p">|</span> cat -n
+</pre></div>
+</div>
+</div>
+</div>
+<p>So to explain these options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">basedir</span></code> specifies the base directory for where all the XML files are reference with respect to. As you can see from lines 3, 4, 5 - this should be the directory containing <code class="docutils literal notranslate"><span class="pre">results/</span></code> and <code class="docutils literal notranslate"><span class="pre">config/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output-file</span></code> specifies the output JSON file. If one is not specified, this will print to the screen, which you can redirect into a file if you want (<code class="docutils literal notranslate"><span class="pre">pyhf</span> <span class="pre">xml2json</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">workspace.json</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hide-progress</span></code> will disable showing the progress bars when running the script… but we like progress bars 🙂</p></li>
+</ul>
+<p>Let’s go ahead and run this command, but we won’t specify the output file so it goes to the screen. We’ll also disable the progress tracking, just so we have a nicer output for this tutorial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress <span class="p">|</span> cat -n
+</pre></div>
+</div>
+</div>
+</div>
+<p>Only 130 lines for the entire workspace! Not too shabby. If we look through a couple of pieces:</p>
+<ul class="simple">
+<li><p>line 2: specify a list of channels</p></li>
+<li><p>line 5: specify the samples for <code class="docutils literal notranslate"><span class="pre">channel1</span></code></p></li>
+<li><p>lines 6-10: specify the expected event rate for the <code class="docutils literal notranslate"><span class="pre">signal</span></code> sample in <code class="docutils literal notranslate"><span class="pre">channel1</span></code></p></li>
+<li><p>line 11: specify a list of modifiers (e.g. parameters that modify the sample)</p></li>
+</ul>
+<p>Similarly, if we continue down to the second half of this JSON, we hit line 72 which specifies a list of <code class="docutils literal notranslate"><span class="pre">measurements</span></code> for this workspace. In fact, we only have one measurement called <code class="docutils literal notranslate"><span class="pre">GaussExample</span></code> with the parameter of interest defined as <code class="docutils literal notranslate"><span class="pre">SigXsecOverSM</span></code>. This measurement also specifies additional parameter configuration such as details for the luminosity modifier (parameter name <code class="docutils literal notranslate"><span class="pre">lumi</span></code>).</p>
+<p>Nearly at the end, the next part of this specification is for the <code class="docutils literal notranslate"><span class="pre">observations</span></code> (observed data) on line 113. Each observation corresponds with the channel, where <code class="docutils literal notranslate"><span class="pre">channel1</span></code> has two bins, and <code class="docutils literal notranslate"><span class="pre">channel2</span></code> also has two bins.</p>
+<p>Finally, we have a <code class="docutils literal notranslate"><span class="pre">version</span></code> which specifies the version of the schema used for the JSON HistFactory. In this case, we’re using <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> which has the <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/schemas/1.0.0/workspace.json">https://pyhf.readthedocs.io/en/v0.6.3/schemas/1.0.0/workspace.json</a> definition which refers to the <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/schemas/1.0.0/defs.json">https://pyhf.readthedocs.io/en/v0.6.3/schemas/1.0.0/defs.json</a>.</p>
+<p>What’s really nice about the schema definition is that it allows anyone to write their own tooling/scripting to build up the workspace and quickly check if it matches the schema. This will get you 90% of the way there in having a valid workspace to work with.</p>
+<p>There are some additional checks that cannot be done, such as name conflicts, or ensuring that all samples in a channel have the same binning structure. The good news is that these checks can be done simply by loading up the workspace into a <code class="docutils literal notranslate"><span class="pre">pyhf.Workspace</span></code> object which will do the schema validation, as well as the additional checks.</p>
+<p>Speaking of <code class="docutils literal notranslate"><span class="pre">pyhf.Workspace</span></code> objects…</p>
+</div>
+<div class="section" id="via-the-python-interface">
+<h3>via the python interface<a class="headerlink" href="#via-the-python-interface" title="Permalink to this headline">¶</a></h3>
+<p>Let’s do the exact same thing, but from the python interpreter</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyhf</span>
+<span class="kn">import</span> <span class="nn">pyhf.readxml</span>  <span class="c1"># not imported by default!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spec</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">readxml</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span>
+    <span class="s2">&quot;data/multichannel_histfactory/config/example.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;data/multichannel_histfactory&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we’re not going to dump this out. We already did that above. Let’s just quickly go ahead and load it into a <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/_generated/pyhf.workspace.Workspace.html#pyhf.workspace.Workspace"><code class="docutils literal notranslate"><span class="pre">pyhf.Workspace</span></code></a> object because we can.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">Workspace</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    channels: </span><span class="si">{</span><span class="n">ws</span><span class="o">.</span><span class="n">channels</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;       nbins: </span><span class="si">{</span><span class="n">ws</span><span class="o">.</span><span class="n">channel_nbins</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     samples: </span><span class="si">{</span><span class="n">ws</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   modifiers: </span><span class="si">{</span><span class="n">ws</span><span class="o">.</span><span class="n">modifiers</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  parameters: </span><span class="si">{</span><span class="n">ws</span><span class="o">.</span><span class="n">parameters</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;observations: </span><span class="si">{</span><span class="n">ws</span><span class="o">.</span><span class="n">observations</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Already, we’re seeing a lot of information about this workspace as it’s rather inspectable. Remember, this is not a model. What we call a ‘model’ is to combine the channel specification with a measurement… that is, a measurement of a workspace uniquely defines that model. A model might choose a particular parameter of interest to measure or set specific parameters as constant during the fit. These configurations are all stored in the <code class="docutils literal notranslate"><span class="pre">measurements</span></code> key we saw above. We’ll explore more about models in the next chapter.</p>
+<p>Let’s move on to more things we can do with the command line.</p>
+</div>
+</div>
+<div class="section" id="workspace-inspection">
+<h2>Workspace Inspection<a class="headerlink" href="#workspace-inspection" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have a working command for converting our XML to JSON, let’s go ahead and take advantage of the JSON output by piping it to <code class="docutils literal notranslate"><span class="pre">pyhf</span> <span class="pre">inspect</span></code> which will print out a nice summary of our workspace.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf inspect --help
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+<p>Immediately, we get a lot of useful information. We can see the number of channels, samples, parameters, and modifiers. Then we get a breakdown of the channels (and the number of bins for each channel), the samples, and the parameters. Finally, we see a list of measurements defined in the workspace, as well as the <code class="docutils literal notranslate"><span class="pre">(*)</span></code> denoting the default measurement if one is not specified.</p>
+<p><strong>Could the number of parameters and modifiers differ?</strong></p>
+</div>
+<div class="section" id="normalizing-a-workspace">
+<h2>“Normalizing” a Workspace<a class="headerlink" href="#normalizing-a-workspace" title="Permalink to this headline">¶</a></h2>
+<p>There comes a time when you need to make comparisons to determine changes between two workspaces. This means depending on how the workspace is generated, one might need to “sort” it. <code class="docutils literal notranslate"><span class="pre">pyhf</span> <span class="pre">sort</span></code> is a utility that will normalize the workspace for you, such that certain operations like calculating a checksum (<code class="docutils literal notranslate"><span class="pre">pyhf</span> <span class="pre">digest</span></code>) guarantees unitarity.</p>
+<p>For simple workspaces like the ones we’re using in this tutorial, they’re already sorted… however, this is not true in the real world. Notice how the <code class="docutils literal notranslate"><span class="pre">bkg</span></code> is now the first sample and <code class="docutils literal notranslate"><span class="pre">signal</span></code> is the second sample after sorting.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf sort --help
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf sort
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="computing-a-digest">
+<h2>Computing a digest<a class="headerlink" href="#computing-a-digest" title="Permalink to this headline">¶</a></h2>
+<p>Next up is a way to determine if two workspaces are equivalent, simply by comparing their computed digest. Note that this is based on the contents of the workspace and will not ensure floating-point differences are treated identically. That is, <code class="docutils literal notranslate"><span class="pre">2.19999999</span></code> and <code class="docutils literal notranslate"><span class="pre">2.2000001</span></code> will likely be treated as differently in the digest calculation as in python. We’ll show here why sorting is very important.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf digest --help
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf digest
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf sort | \
+  pyhf digest
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that the ordering of the samples will have switched through the sorting.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">sha256</span></code> algorithm is used to compute the checksum for this workspace. This means that one can generally “normalize” all workspaces, then compute the digest and guarantee uniqueness. As with all command line functionality you’ve seen so far, there are equivalent ways to do it through python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsorted: </span><span class="si">{</span><span class="n">pyhf</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">digest</span><span class="p">(</span><span class="n">ws</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sorted:   </span><span class="si">{</span><span class="n">pyhf</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">digest</span><span class="p">(</span><span class="n">pyhf</span><span class="o">.</span><span class="n">Workspace</span><span class="o">.</span><span class="n">sorted</span><span class="p">(</span><span class="n">ws</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pruning-away-items">
+<h2>“Pruning” away items<a class="headerlink" href="#pruning-away-items" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you want to manipulate workspaces by removing channels or samples or systematics (or measurements). This can be useful when trying to debug fits, or to build background-only workspaces, or to clean up a workspace.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf prune --help
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="prune-channels">
+<h3>prune channels<a class="headerlink" href="#prune-channels" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf prune -c channel1 | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prune-samples">
+<h3>prune samples<a class="headerlink" href="#prune-samples" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf prune -s signal | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prune-modifiers">
+<h3>prune modifiers<a class="headerlink" href="#prune-modifiers" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf prune -m uncorrshape_signal | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prune-modifier-types">
+<h3>prune modifier types<a class="headerlink" href="#prune-modifier-types" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf prune -t shapesys | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="renaming-items">
+<h2>Renaming items<a class="headerlink" href="#renaming-items" title="Permalink to this headline">¶</a></h2>
+<p>In addition to removing items, you might want to rename your channels, samples, modifiers, or measurement names. This can be useful for creating modifier correlations, or removing modifier correlations, or just cleaning up your workspace to get it ready for publication.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pyhf rename --help
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rename-channels">
+<h3>rename channels<a class="headerlink" href="#rename-channels" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf rename -c channel1 SR -c channel2 CR | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rename-samples">
+<h3>rename samples<a class="headerlink" href="#rename-samples" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf rename -s bkg background | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rename-modifiers">
+<h3>rename modifiers<a class="headerlink" href="#rename-modifiers" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf rename -m uncorrshape_signal corrshape -m uncorrshape_control corrshape | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rename-measurements">
+<h3>rename measurements<a class="headerlink" href="#rename-measurements" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>! pyhf xml2json --basedir data/multichannel_histfactory data/multichannel_histfactory/config/example.xml --hide-progress | \
+  pyhf rename --measurement GaussExample FitConfig | \
+  pyhf inspect
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="IntroToHiFa.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">HistFactory</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Modifiers.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modifiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By the pyhf development team<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

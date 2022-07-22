@@ -1,0 +1,1144 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to HistFactory Models &#8212; pyhf Tutorial</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction to Workspaces" href="SimpleWorkspace.html" />
+    <link rel="prev" title="pyhf Tutorial" href="introduction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">pyhf Tutorial</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   pyhf Tutorial
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to HistFactory Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SimpleWorkspace.html">
+   Introduction to Workspaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SerializationAndPatching.html">
+   Using HEPData
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Common use and applications
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PullPlot.html">
+   Making a Pull Plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Toys.html">
+   Playing with Toys
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Combinations.html">
+   Performing a Combination
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IntroToHiFa.html">
+   HistFactory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="WorkspaceManipulations.html">
+   Workspace Manipulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modifiers.html">
+   Modifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UsingCalculators.html">
+   Using Calculators
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learn Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="InterpolationCodes.html">
+   Piecewise Linear Interpolation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/HelloWorld.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/pyhf/pyhf-tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/pyhf/pyhf-tutorial/issues/new?title=Issue%20on%20page%20%2FHelloWorld.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/pyhf/pyhf-tutorial/edit/main/book/HelloWorld.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main?urlpath=lab/tree/book/HelloWorld.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/pyhf/pyhf-tutorial/blob/main/book/HelloWorld.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hep-like">
+   HEP-like?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#auxiliary-data">
+   Auxiliary Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-and-parameters">
+   Data and Parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-parameter-ordering">
+     The Parameter Ordering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-parameter-multiplicity">
+     The Parameter Multiplicity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-parameter-defaults">
+     The Parameter Defaults
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-inference">
+   Simple Inference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-hypothesis-testing">
+   Simple Hypothesis Testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-upper-limit">
+   Simple Upper Limit
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to HistFactory Models</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hep-like">
+   HEP-like?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#auxiliary-data">
+   Auxiliary Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-and-parameters">
+   Data and Parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-parameter-ordering">
+     The Parameter Ordering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-parameter-multiplicity">
+     The Parameter Multiplicity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-parameter-defaults">
+     The Parameter Defaults
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-inference">
+   Simple Inference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-hypothesis-testing">
+   Simple Hypothesis Testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-upper-limit">
+   Simple Upper Limit
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-histfactory-models">
+<h1>Introduction to HistFactory Models<a class="headerlink" href="#introduction-to-histfactory-models" title="Permalink to this headline">¶</a></h1>
+<p>🎶 I’m the very Model of a simple HEP-like measurement… 🎶</p>
+<div class="section" id="hep-like">
+<h2>HEP-like?<a class="headerlink" href="#hep-like" title="Permalink to this headline">¶</a></h2>
+<p>So what do we do as experimentalists in High Energy Physics? We have a gigantic detector that serves as a counting machine for physics. We smash particles and take pictures of the aftermath. Then we propose hypotheses for new physics that we want to test using this data. So we will have, at the very least:</p>
+<ul class="simple">
+<li><p>signal</p></li>
+<li><p>background (with some uncertainty)</p></li>
+<li><p>some observations</p></li>
+</ul>
+<p>This is probably the simplest model one could use in HistFactory… so let’s make it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyhf</span>
+<span class="kn">from</span> <span class="nn">pyhf.contrib.viz</span> <span class="kn">import</span> <span class="n">brazil</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">simplemodels</span><span class="o">.</span><span class="n">uncorrelated_background</span><span class="p">(</span>
+    <span class="n">signal</span><span class="o">=</span><span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">],</span> <span class="n">bkg</span><span class="o">=</span><span class="p">[</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">],</span> <span class="n">bkg_uncertainty</span><span class="o">=</span><span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyhf.pdf.Model at 0x7fa9c24b9360&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>What did we just make? This returns a <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/_generated/pyhf.pdf.Model.html#pyhf.pdf.Model"><code class="docutils literal notranslate"><span class="pre">pyhf.pdf.Model</span></code></a> object. Let’s check out the specification.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">spec</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;channels&quot;: [
+    {
+      &quot;name&quot;: &quot;singlechannel&quot;,
+      &quot;samples&quot;: [
+        {
+          &quot;name&quot;: &quot;signal&quot;,
+          &quot;data&quot;: [
+            5.0,
+            10.0
+          ],
+          &quot;modifiers&quot;: [
+            {
+              &quot;name&quot;: &quot;mu&quot;,
+              &quot;type&quot;: &quot;normfactor&quot;,
+              &quot;data&quot;: null
+            }
+          ]
+        },
+        {
+          &quot;name&quot;: &quot;background&quot;,
+          &quot;data&quot;: [
+            50.0,
+            60.0
+          ],
+          &quot;modifiers&quot;: [
+            {
+              &quot;name&quot;: &quot;uncorr_bkguncrt&quot;,
+              &quot;type&quot;: &quot;shapesys&quot;,
+              &quot;data&quot;: [
+                5.0,
+                12.0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we can see from the specification, we defined a single two-bin channel (‘singlechannel’) with two samples: a <strong>signal sample</strong> and a <strong>background sample</strong>. The signal sample has an <em>unconstrained normalization factor</em> <span class="math notranslate nohighlight">\(\mu\)</span>, the signal strength, while the background sample carries an <em>uncorrelated shape systematic</em> controlled by parameters <span class="math notranslate nohighlight">\(\gamma_{1}\)</span> and <span class="math notranslate nohighlight">\(\gamma_{2}\)</span>. The <em>background uncertainty</em> for the bins is <span class="math notranslate nohighlight">\(10\%\)</span> and <span class="math notranslate nohighlight">\(20\%\)</span> respectively.</p>
+<p>These uncertainties are <strong>absolute</strong> (not relative!). We have 10% and 20% relative uncertainty for the bins in the background sample respectively.</p>
+<p>(<em>Note: we have a workspace defined with this simple model in <code class="docutils literal notranslate"><span class="pre">data/2-bin_1-channel.json</span></code> which we will look at later.</em>)</p>
+<p>Let’s explore the model a little bit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  channels: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">channels</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     nbins: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">channel_nbins</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   samples: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; modifiers: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">modifiers</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;parameters: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">parameters</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  nauxdata: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">nauxdata</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   auxdata: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  channels: [&#39;singlechannel&#39;]
+     nbins: {&#39;singlechannel&#39;: 2}
+   samples: [&#39;background&#39;, &#39;signal&#39;]
+ modifiers: [(&#39;mu&#39;, &#39;normfactor&#39;), (&#39;uncorr_bkguncrt&#39;, &#39;shapesys&#39;)]
+parameters: [&#39;mu&#39;, &#39;uncorr_bkguncrt&#39;]
+  nauxdata: 2
+   auxdata: [100.0, 25.0]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="auxiliary-data">
+<h2>Auxiliary Data<a class="headerlink" href="#auxiliary-data" title="Permalink to this headline">¶</a></h2>
+<p>Whoa, hold up! What’s with the auxiliary data? Recall the HistFactory definition</p>
+<div class="math notranslate nohighlight">
+\[
+p(n,a|\theta) = \underbrace{\prod_{\mathrm{channel}\ c}\prod_{\mathrm{bin}\ b} \mathrm{Pois}(n_{cb} | \lambda_{cb}(\theta))}_{\text{main}} \underbrace{\prod_{\mathrm{constraint}\ \chi} p_\chi(a_\chi | \chi)}_{\text{auxiliary}}
+\]</div>
+<p>for</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{cb}(\theta) = \sum_{\mathrm{sample}\ s} \lambda_{cbs}(\theta)
+\]</div>
+<p>and the auxiliary data here is passed into a constraint function. There’s two things going on here:</p>
+<ol class="simple">
+<li><p>The uncorrelated shapesys modifier is constrained by a Poisson.</p></li>
+<li><p>The auxiliary data is fully determined by the shapesys ‘data’ and the ‘background’ data.</p></li>
+</ol>
+<p>So if we were to explicitly write out the likelihood we were seeing symbolically, it would be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+p_\text{main} \cdot p_\text{aux} &amp;= \text{Pois}(n | \lambda) \cdot p_\text{aux}\\
+                                 &amp;= \text{Pois}(n | \mu s + \gamma b) \cdot p_\text{aux}\\
+                                 &amp;= \text{Pois}(n | \mu s + \gamma b) \cdot \text{Pois}(n_\text{aux} = (b/\delta b)^2 | \mu = (b/\delta b)^2 \gamma )\\
+\end{align}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(n = \{n_1, n_2\}\)</span> for a 2-bin model (we’re being slightly fast and loose with our mathematical notation here), and similarly for <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, and <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<p>The ‘shapesys’ is defined in the <a class="reference external" href="https://cds.cern.ch/record/1456844">HistFactory paper</a>… however, it can be a little hard to extract out the necessary information. We’ve provided a nice table of <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/intro.html#id24">Modifiers and Constraints</a> in the introduction of our pyhf documentation to use as reference.</p>
+<p><img alt="modifiers and constraints" src="_images/modifiers_and_constraints.png" /></p>
+<p>Let’s look at the first row here which is our uncorrelated shape modifier. This is a multiplicative modifier denoted by <span class="math notranslate nohighlight">\(\kappa\)</span> per-bin (denoted by <span class="math notranslate nohighlight">\(\gamma_b\)</span>). Notice that the input for the constraint term requires <span class="math notranslate nohighlight">\(\sigma_b\)</span> which is the relative uncertainty of that modifier. This is Poisson-constrained by <span class="math notranslate nohighlight">\(\sigma_b^{-2}\)</span>. Let’s quickly calculate “by hand” the auxiliary data to convince ourselves of what’s going on here (remembering that the background uncertainties were 10% and 20% of the observed background counts):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">])</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">]))</span> <span class="o">**</span> <span class="o">-</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([100.,  25.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>which is what we see from the <code class="docutils literal notranslate"><span class="pre">pyhf.pdf.Model</span></code> API</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[100.0, 25.0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Everything looks good!</p>
+</div>
+<div class="section" id="data-and-parameters">
+<h2>Data and Parameters<a class="headerlink" href="#data-and-parameters" title="Permalink to this headline">¶</a></h2>
+<p>What about the actual data for the model then?</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">expected_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span><span class="o">.</span><span class="n">expected_data</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: Model.expected_data() missing 1 required positional argument: &#39;pars&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hrmm, that didn’t work. It seems we need to specify the parameter values to get the data for the model at those parameter values. Well, we know the default for <span class="math notranslate nohighlight">\(\mu=1\)</span> and <span class="math notranslate nohighlight">\(\gamma = 1\)</span>. Also recall that the uncorrelated shape allocates a parameter per bin, so our model has <strong>3 parameters</strong> with <strong>2 modifiers</strong>. So let’s just try that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">expected_data</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 55.,  70., 100.,  25.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This returns the expected data given the model parameters for the entire likelihood for the 2 bin model, the main model as well as the constraint (or auxiliary) model. We can also drop the auxdata to get the actual data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">expected_data</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="n">include_auxdata</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([55., 70.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, there are also methods separately for the actual data and the auxdata, both which take in all the parameters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">expected_actualdata</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([55., 70.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">expected_auxdata</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([100.,  25.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-parameter-ordering">
+<h3>The Parameter Ordering<a class="headerlink" href="#the-parameter-ordering" title="Permalink to this headline">¶</a></h3>
+<p>So how do we know what these parameters correspond to? The way <code class="docutils literal notranslate"><span class="pre">pyhf</span></code> works under the hood, you can imagine an <code class="docutils literal notranslate"><span class="pre">n</span></code>-dimensional tensor that is purely bookkeeping all the different expected rates and modifications (read: systematics) involved that we can apply tensor algebra calculations to. This means that the ordering of the entries in each dimension is important, so we need to keep track of the order of the channels, the samples, the parameters. In <code class="docutils literal notranslate"><span class="pre">pyhf</span></code>, you can ask for the parameters or modifiers in a model:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">parameters</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;mu&#39;, &#39;uncorr_bkguncrt&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">modifiers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;mu&#39;, &#39;normfactor&#39;), (&#39;uncorr_bkguncrt&#39;, &#39;shapesys&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, these might <strong>not necessarily</strong> correspond with the order of the parameters when we build this tensor internally, and we keep this order under a different variable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">par_order</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;mu&#39;, &#39;uncorr_bkguncrt&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-parameter-multiplicity">
+<h3>The Parameter Multiplicity<a class="headerlink" href="#the-parameter-multiplicity" title="Permalink to this headline">¶</a></h3>
+<p>But this clearly doesn’t answer everything, because we were using three numbers assigned to two parameters! How does that work? Well, recall that the only channel in this model has 2 bins:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">channel_nbins</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;singlechannel&#39;: 2}
+</pre></div>
+</div>
+</div>
+</div>
+<p>and one of the parameters (the uncorrelated shape systematic) will be configured by <span class="math notranslate nohighlight">\(\gamma_b\)</span> — that is, one parameter for each bin of the sample in that channel. How does <code class="docutils literal notranslate"><span class="pre">pyhf</span></code> know that the parameter set is associated with two parameters? We can ask for information about the <code class="docutils literal notranslate"><span class="pre">paramset</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">param_set</span><span class="p">(</span><span class="s2">&quot;uncorr_bkguncrt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyhf.parameters.paramsets.constrained_by_poisson at 0x7fa9c24ba170&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>which we can see is constrained by a Poisson and</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">param_set</span><span class="p">(</span><span class="s2">&quot;uncorr_bkguncrt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">n_parameters</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-parameter-defaults">
+<h3>The Parameter Defaults<a class="headerlink" href="#the-parameter-defaults" title="Permalink to this headline">¶</a></h3>
+<p>So how do we know what we should set the parameters to? The nice thing is that this is up to you! The model will come with some suggested defaults for parameters…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">suggested_init</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.0, 1.0, 1.0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>…and their bounds</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">suggested_bounds</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0, 10), (1e-10, 10.0), (1e-10, 10.0)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>… and if the parameter should be held constant in a fit or not</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">suggested_fixed</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[False, False, False]
+</pre></div>
+</div>
+</div>
+</div>
+<p>So armed with this knowledge, we could have also done</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">init_pars</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">suggested_init</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">expected_actualdata</span><span class="p">(</span><span class="n">init_pars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([55., 70.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get the expected actual data from the model (signal + background), we could turn off the signal, corresponding with the normalization factor. We just need to know the index of the parameter:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">poi_index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>and then just change the parameter</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bkg_pars</span> <span class="o">=</span> <span class="n">init_pars</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">bkg_pars</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">poi_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">model</span><span class="o">.</span><span class="n">expected_actualdata</span><span class="p">(</span><span class="n">bkg_pars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([50., 60.])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="simple-inference">
+<h2>Simple Inference<a class="headerlink" href="#simple-inference" title="Permalink to this headline">¶</a></h2>
+<p>The core of statistical analysis is the statistical model. For inference, it’s viewed as a function of the model parameters conditioned on the fixed observations.</p>
+<div class="math notranslate nohighlight">
+\[
+\log L(\theta | x) \propto \log p(x | \theta)
+\]</div>
+<p>The value of the likelihood is a float. Let’s try it for both the background-only model as well as the signal+background model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observations</span> <span class="o">=</span> <span class="p">[</span><span class="mf">53.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span>  <span class="c1"># this is a common pattern!</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">logpdf</span><span class="p">(</span><span class="n">pars</span><span class="o">=</span><span class="n">bkg_pars</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">observations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-11.9581657])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">logpdf</span><span class="p">(</span><span class="n">pars</span><span class="o">=</span><span class="n">init_pars</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">observations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-11.88693198])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’re not performing inference just yet. We’re simply computing the ‘logpdf’ of the model specified by the parameters <span class="math notranslate nohighlight">\(\theta\)</span> against the provided data. To perform a fit, we use the <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/api.html#inference">inference API</a> via <code class="docutils literal notranslate"><span class="pre">pyhf.infer</span></code>.</p>
+<p>When fitting a model to data, we usually want to find the <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> which refers to the “Maximum Likelihood Estimate” of the model parameters. This is often referred to mathematically by</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{\theta}_\text{MLE} = \text{argmax}_\theta L(\theta | x)
+\]</div>
+<p>Let’s perform a unconstrained maximum likelihood fit on this model to the provided observations we just made up.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">mle</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">observations</span><span class="p">,</span> <span class="n">pdf</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.54010242, 1.00192674, 0.99540553])
+</pre></div>
+</div>
+</div>
+</div>
+<p>So what can we say? With nominal signal <code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">10]</span></code> and nominal background = <code class="docutils literal notranslate"><span class="pre">[50,</span> <span class="pre">60]</span></code> model components, an observed count of <code class="docutils literal notranslate"><span class="pre">[53,</span> <span class="pre">65]</span></code> suggests best fit values:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{\mu} \approx 0.54\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{\gamma} \approx [1,1]\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="simple-hypothesis-testing">
+<h2>Simple Hypothesis Testing<a class="headerlink" href="#simple-hypothesis-testing" title="Permalink to this headline">¶</a></h2>
+<p>Great, so we can fit. But that’s not usually the interesting part, since we cannot make any statements about this. What we prefer to do is perform a hypothesis test to either:</p>
+<ul class="simple">
+<li><p>Reject Standard Model hypothesis — a discovery fit.</p></li>
+<li><p>Reject Beyond the Standard Model hypothesis — an exclusion fit.</p></li>
+</ul>
+<p>So we need to compute test statistics in order to evaluate the hypothesis. If we know the distribution of the test statistic under two different hypotheses, we can compute a <a class="reference external" href="https://en.wikipedia.org/wiki/CLs_method_(particle_physics)">CLs</a> value. This is a modified pseudo-frequentist <span class="math notranslate nohighlight">\(p\,\)</span>-value.</p>
+<div class="math notranslate nohighlight">
+\[
+\text{CL}_\text{s} = \frac{\text{CL}_\text{s+b}}{\text{CL}_\text{b}} = \frac{p_{\text{s+b}}}{1-p_{\text{b}}}
+\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[
+\text{CL}_\text{s+b} = \int_{t_\text{obs}}^\infty \text{d}t\ p_0(t | H_0) \qquad\qquad \text{CL}_\text{b} = \int_{t_\text{obs}}^\infty \text{d}t\ p_1(t | H_1)
+\]</div>
+<p>This is done by splitting the model parameters up into two groups:</p>
+<ul class="simple">
+<li><p>parameters of interest (POI — can have multiple!)</p></li>
+<li><p>nuisance parameters (NP)</p></li>
+</ul>
+<p>Recall that additionally, all parameters are either constrained or unconstrained. Parameters of interest happen to always be unconstrained parameters.</p>
+<div class="math notranslate nohighlight">
+\[
+    f(\boldsymbol{x}|\phi) = f(\boldsymbol{x}|\overbrace{\eta}^{\llap{\text{free}}},\underbrace{\chi}_{\llap{\text{constrained}}}) = f(\boldsymbol{x}|\overbrace{\psi}^{\rlap{\text{parameters of interest}}},\underbrace{\theta}_{\rlap{\text{nuisance parameters}}})
+\]</div>
+<p>In the vast majority of cases, the test statistic is the profile likelihood ratio, or variations of it:</p>
+<div class="math notranslate nohighlight">
+\[
+t_\psi(x) = \frac{L(\psi, \hat{\hat{\theta}})}{L({\hat{\psi}, \hat{\theta}})}
+\]</div>
+<p>where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{\hat{\theta}}\)</span> is the best fitted value of the nuisance parameters (for fixed POIs)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{\psi}\)</span> and <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> are the best fitted values in a global fit</p></li>
+</ul>
+<p>So let’s run a limit setting (exclusion) hypothesis test for</p>
+<ul class="simple">
+<li><p>null hypothesis (<span class="math notranslate nohighlight">\(\mu = 1\)</span>) — “BSM physics process exists”</p></li>
+<li><p>alternate hypothesis (<span class="math notranslate nohighlight">\(\mu = 0\)</span>) — “Standard Model only physics”</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CLs_obs</span><span class="p">,</span> <span class="n">CLs_exp</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># null hypothesis</span>
+    <span class="p">[</span><span class="mf">53.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;q&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Observed CLs: </span><span class="si">{</span><span class="n">CLs_obs</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">n_sigma</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">CLs_exp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs(</span><span class="si">{</span><span class="n">n_sigma</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> σ): </span><span class="si">{</span><span class="n">expected_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>qmu test statistic used for fit configuration with POI bounded at zero.
+Use the qmu_tilde test statistic (pyhf.infer.test_statistics.qmu_tilde) instead.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>qmu test statistic used for fit configuration with POI bounded at zero.
+Use the qmu_tilde test statistic (pyhf.infer.test_statistics.qmu_tilde) instead.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Observed CLs: 0.4957
+Expected CLs(-2 σ): 0.0832
+Expected CLs(-1 σ): 0.1828
+Expected CLs( 0 σ): 0.3705
+Expected CLs( 1 σ): 0.6437
+Expected CLs( 2 σ): 0.8854
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nicely enough, <code class="docutils literal notranslate"><span class="pre">pyhf</span></code> is smart enough to let us know that, if for a model where <span class="math notranslate nohighlight">\(\hat{\psi} &lt; 0\)</span>, we’re not going to be able to catch it because our default bounds were bounding the parameter of interest from below at 0. For more information, see Equation 14 in <a class="reference external" href="https://arxiv.org/abs/1007.1727">[1007.1727]</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">suggested_bounds</span><span class="p">()[</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">poi_index</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We should heed the warning and switch our test statistic in this case to a variation of it <span class="math notranslate nohighlight">\(q_\mu \to \tilde{q}_\mu\)</span>. We could also change the bounds from the default to allow <span class="math notranslate nohighlight">\(\mu\)</span> to float below zero. In this case, we’re just going to use a more appropriate test statistic as we know <span class="math notranslate nohighlight">\(\hat{\mu} \geq 0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CLs_obs</span><span class="p">,</span> <span class="n">CLs_exp</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># null hypothesis</span>
+    <span class="p">[</span><span class="mf">53.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Observed CLs: </span><span class="si">{</span><span class="n">CLs_obs</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">n_sigma</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">CLs_exp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs(</span><span class="si">{</span><span class="n">n_sigma</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> σ): </span><span class="si">{</span><span class="n">expected_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Observed CLs: 0.4957
+Expected CLs(-2 σ): 0.0832
+Expected CLs(-1 σ): 0.1828
+Expected CLs( 0 σ): 0.3705
+Expected CLs( 1 σ): 0.6437
+Expected CLs( 2 σ): 0.8854
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="simple-upper-limit">
+<h2>Simple Upper Limit<a class="headerlink" href="#simple-upper-limit" title="Permalink to this headline">¶</a></h2>
+<p>To get upper limits, we just need to run multiple hypothesis tests for a lot of different null hypotheses of BSM with <span class="math notranslate nohighlight">\(\mu \in [0, \ldots, 5.0]\)</span> and then find the value of <span class="math notranslate nohighlight">\(\mu\)</span> for which the null hypothesis is rejected (a 95% <span class="math notranslate nohighlight">\(\text{CL}_\text{s}\)</span>). We can do all of this very easily just using the <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/_generated/pyhf.infer.intervals.upperlimit.html"><code class="docutils literal notranslate"><span class="pre">upperlimit</span></code> API</a>, which also can calculate the upper limit by interpolating</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poi_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">obs_limit</span><span class="p">,</span> <span class="n">exp_limits</span><span class="p">,</span> <span class="p">(</span><span class="n">scan</span><span class="p">,</span> <span class="n">results</span><span class="p">)</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">intervals</span><span class="o">.</span><span class="n">upperlimit</span><span class="p">(</span>
+    <span class="n">observations</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">poi_values</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">return_results</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Upper limit (obs): μ = </span><span class="si">{</span><span class="n">obs_limit</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Upper limit (exp): μ = </span><span class="si">{</span><span class="n">exp_limits</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Upper limit (obs): μ = 2.5471
+Upper limit (exp): μ = 2.1734
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can plot the standard “Brazil band” of the observed and expected <span class="math notranslate nohighlight">\(\text{CL}_\text{s}\)</span> values using the <code class="docutils literal notranslate"><span class="pre">pyhf.contrib</span></code> module (which needs <code class="docutils literal notranslate"><span class="pre">pyhf[contrib]</span></code>):</p>
+<p>The horiztonal red line indicates the test size (<span class="math notranslate nohighlight">\(\alpha=0.05\)</span>), whose intersection with the <span class="math notranslate nohighlight">\(\text{CL}_\text{s}\)</span> lines visually represents the <span class="math notranslate nohighlight">\((1-\alpha)\%\)</span> CL limit on the POI.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">10.5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Hypothesis Tests&quot;</span><span class="p">)</span>
+
+<span class="n">artists</span> <span class="o">=</span> <span class="n">brazil</span><span class="o">.</span><span class="n">plot_results</span><span class="p">(</span><span class="n">poi_values</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/HelloWorld_70_0.png" src="_images/HelloWorld_70_0.png" />
+</div>
+</div>
+<p>Note that if you wanted to do all of this “by hand” you still could pretty easily. The <code class="docutils literal notranslate"><span class="pre">pyhf.infer.intervals.upperlimit</span></code> API just makes it easier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perform a hypothesis test scan across POIs</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+        <span class="n">poi_value</span><span class="p">,</span>
+        <span class="n">observations</span><span class="p">,</span>
+        <span class="n">model</span><span class="p">,</span>
+        <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+        <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">poi_value</span> <span class="ow">in</span> <span class="n">poi_values</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate upper limit through interpolation</span>
+<span class="n">observed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">h</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">h</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Upper limit (obs): μ = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">observed</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">poi_values</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Upper limit (exp): μ = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">expected</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">poi_values</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Upper limit (obs): μ = 2.5471
+Upper limit (exp): μ = 2.1734
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">pyhf</span></code> Tutorial</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="SimpleWorkspace.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to Workspaces</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By the pyhf development team<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

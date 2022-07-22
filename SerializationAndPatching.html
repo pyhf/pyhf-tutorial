@@ -1,0 +1,940 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using HEPData &#8212; pyhf Tutorial</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Making a Pull Plot" href="PullPlot.html" />
+    <link rel="prev" title="Introduction to Workspaces" href="SimpleWorkspace.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">pyhf Tutorial</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   pyhf Tutorial
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HelloWorld.html">
+   Introduction to HistFactory Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SimpleWorkspace.html">
+   Introduction to Workspaces
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Using HEPData
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Common use and applications
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PullPlot.html">
+   Making a Pull Plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Toys.html">
+   Playing with Toys
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Combinations.html">
+   Performing a Combination
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IntroToHiFa.html">
+   HistFactory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="WorkspaceManipulations.html">
+   Workspace Manipulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modifiers.html">
+   Modifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UsingCalculators.html">
+   Using Calculators
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learn Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="InterpolationCodes.html">
+   Piecewise Linear Interpolation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/SerializationAndPatching.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/pyhf/pyhf-tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/pyhf/pyhf-tutorial/issues/new?title=Issue%20on%20page%20%2FSerializationAndPatching.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/pyhf/pyhf-tutorial/edit/main/book/SerializationAndPatching.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main?urlpath=lab/tree/book/SerializationAndPatching.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/pyhf/pyhf-tutorial/blob/main/book/SerializationAndPatching.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preserved-on-hepdata">
+   Preserved on HEPData
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-data">
+     Getting the Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instantiate-our-objects">
+   Instantiate our objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#patching-in-signals">
+   Patching in Signals
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#patchset">
+     PatchSet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#patches">
+     Patches
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#patching-via-model-creation">
+     Patching via Model Creation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doing-physics">
+   Doing Physics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#doing-physics-for-real-now">
+     Doing Physics, for real now
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Using HEPData</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preserved-on-hepdata">
+   Preserved on HEPData
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-data">
+     Getting the Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instantiate-our-objects">
+   Instantiate our objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#patching-in-signals">
+   Patching in Signals
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#patchset">
+     PatchSet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#patches">
+     Patches
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#patching-via-model-creation">
+     Patching via Model Creation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doing-physics">
+   Doing Physics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#doing-physics-for-real-now">
+     Doing Physics, for real now
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="using-hepdata">
+<h1>Using HEPData<a class="headerlink" href="#using-hepdata" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">pyhf</span>
+<span class="kn">import</span> <span class="nn">pyhf.contrib.utils</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="preserved-on-hepdata">
+<h2>Preserved on HEPData<a class="headerlink" href="#preserved-on-hepdata" title="Permalink to this headline">¶</a></h2>
+<p>As of this tutorial, ATLAS has <a class="reference external" href="https://scikit-hep.org/pyhf/citations.html#published-statistical-models">published 18 full statistical models to HEPData</a></p>
+<p align="center">
+<a href="https://www.hepdata.net/record/ins1755298?version=3"><img src="https://raw.githubusercontent.com/matthewfeickert/talk-SciPy-2020/e0c509cd0dfef98f5876071edd4c60aff9199a1b/figures/HEPData_likelihoods.png"></a>
+</p>
+<p>Let’s explore the 1Lbb workspace a little bit shall we?</p>
+<div class="section" id="getting-the-data">
+<h3>Getting the Data<a class="headerlink" href="#getting-the-data" title="Permalink to this headline">¶</a></h3>
+<p>We’ll use the <code class="docutils literal notranslate"><span class="pre">pyhf[contrib]</span></code> extra (which relies on <code class="docutils literal notranslate"><span class="pre">requests</span></code> and <code class="docutils literal notranslate"><span class="pre">tarfile</span></code>) to download the HEPData minted DOI and extract the files we need.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyhf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">download</span><span class="p">(</span>
+    <span class="s2">&quot;https://doi.org/10.17182/hepdata.90607.v3/r3&quot;</span><span class="p">,</span> <span class="s2">&quot;1Lbb-likelihoods&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will nicely download and extract everything we need.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls -lavh 1Lbb-likelihoods
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 59M
+drwxr-xr-x 2 root root 4.0K Jul 22 05:22 .
+drwxr-xr-x 6 root root 4.0K Jul 22 05:22 ..
+-rw-r--r-- 1 1000 1000 4.3M May  7  2020 BkgOnly.json
+-rw-r--r-- 1 1000 1000 1.4K May 30  2020 README.md
+-rw-r--r-- 1 1000 1000  55M May 31  2020 patchset.json
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="instantiate-our-objects">
+<h2>Instantiate our objects<a class="headerlink" href="#instantiate-our-objects" title="Permalink to this headline">¶</a></h2>
+<p>We have a background-only workspace <code class="docutils literal notranslate"><span class="pre">BkgOnly.json</span></code> and a signal patchset collection <code class="docutils literal notranslate"><span class="pre">patchset.json</span></code>. Let’s create our python objects and play with them:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spec</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;1Lbb-likelihoods/BkgOnly.json&quot;</span><span class="p">))</span>
+<span class="n">patchset</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">PatchSet</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;1Lbb-likelihoods/patchset.json&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So what did the analyzers give us for signal patches?</p>
+</div>
+<div class="section" id="patching-in-signals">
+<h2>Patching in Signals<a class="headerlink" href="#patching-in-signals" title="Permalink to this headline">¶</a></h2>
+<p>Let’s look at this <a class="reference external" href="https://pyhf.readthedocs.io/en/v0.6.3/_generated/pyhf.patchset.PatchSet.html#pyhf.patchset.PatchSet"><code class="docutils literal notranslate"><span class="pre">pyhf.PatchSet</span></code></a> object which provides a user-friendly way to interact with many signal patches at once.</p>
+<div class="section" id="patchset">
+<h3>PatchSet<a class="headerlink" href="#patchset" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">patchset</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyhf.patchset.PatchSet object with 125 patches at 0x7fdd58321d80&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Oh wow, we’ve got 125 patches. What information does it have?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;description: </span><span class="si">{</span><span class="n">patchset</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    digests: </span><span class="si">{</span><span class="n">patchset</span><span class="o">.</span><span class="n">digests</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     labels: </span><span class="si">{</span><span class="n">patchset</span><span class="o">.</span><span class="n">labels</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; references: </span><span class="si">{</span><span class="n">patchset</span><span class="o">.</span><span class="n">references</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    version: </span><span class="si">{</span><span class="n">patchset</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>description: signal patchset for the SUSY EWK 1Lbb analysis
+    digests: {&#39;sha256&#39;: &#39;2563672e1a165384faf49f1431e921d88c9c07ec10f150d5045576564f98f820&#39;}
+     labels: [&#39;m1&#39;, &#39;m2&#39;]
+ references: {&#39;hepdata&#39;: &#39;ins1755298&#39;}
+    version: 1.0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we’ve got a useful description of the signal patches… there’s a digest. Does that match the background-only workspace we have?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyhf</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">digest</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2563672e1a165384faf49f1431e921d88c9c07ec10f150d5045576564f98f820&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>It does! In fact, this sort of verification check will be done automatically when applying patches using <code class="docutils literal notranslate"><span class="pre">pyhf.PatchSet</span></code> as we will see shortly. To manually verify, simply run <code class="docutils literal notranslate"><span class="pre">pyhf.PatchSet.verify</span></code> on the workspace. No error means everything is fine. It will loudly complain otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">patchset</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>No error, whew. Let’s move on.</p>
+<p>The labels <code class="docutils literal notranslate"><span class="pre">m1</span></code> and <code class="docutils literal notranslate"><span class="pre">m2</span></code> tells us that we have the signal patches parametrized in 2-dimensional space, likely as <span class="math notranslate nohighlight">\(m_1 = \tilde{\chi}_1^\pm\)</span> and <span class="math notranslate nohighlight">\(m_2 = \tilde{\chi}_1^0\)</span>… but I guess we’ll see?</p>
+<p>The references list the references for this dataset, which is pointing at the hepdata record for now.</p>
+<p>Next, the version is the version of the schema set we’re using with <code class="docutils literal notranslate"><span class="pre">pyhf</span></code> (<code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>).</p>
+<p>And last, but certainly not least… its patches:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">patchset</span><span class="o">.</span><span class="n">patches</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_0(1000, 0)&#39; at 0x7fdd9083fbb0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_100(1000, 100)&#39; at 0x7fdd583db7c0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_150(1000, 150)&#39; at 0x7fdd583d9ed0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_200(1000, 200)&#39; at 0x7fdd58368c70&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_250(1000, 250)&#39; at 0x7fdd583699f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_300(1000, 300)&#39; at 0x7fdd58369b10&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_350(1000, 350)&#39; at 0x7fdd583696c0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_400(1000, 400)&#39; at 0x7fdd58368be0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_1000_50(1000, 50)&#39; at 0x7fdd58368c10&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_150_0(150, 0)&#39; at 0x7fdd58368a00&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_165_35(165, 35)&#39; at 0x7fdd58368b80&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_175_0(175, 0)&#39; at 0x7fdd58368b20&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_175_25(175, 25)&#39; at 0x7fdd58368220&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_190_60(190, 60)&#39; at 0x7fdd5836b6d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_200_0(200, 0)&#39; at 0x7fdd5836b6a0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_200_25(200, 25)&#39; at 0x7fdd5836b190&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_200_50(200, 50)&#39; at 0x7fdd5836b640&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_225_0(225, 0)&#39; at 0x7fdd58368940&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_225_25(225, 25)&#39; at 0x7fdd5836afe0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_225_50(225, 50)&#39; at 0x7fdd5836b3a0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_250_0(250, 0)&#39; at 0x7fdd5836b670&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_250_100(250, 100)&#39; at 0x7fdd5836b040&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_250_25(250, 25)&#39; at 0x7fdd5836b610&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_250_50(250, 50)&#39; at 0x7fdd5836b880&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_250_75(250, 75)&#39; at 0x7fdd5836b760&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_275_0(275, 0)&#39; at 0x7fdd5836b790&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_275_25(275, 25)&#39; at 0x7fdd5836bd60&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_275_50(275, 50)&#39; at 0x7fdd5836bb80&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_275_75(275, 75)&#39; at 0x7fdd5836bc70&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_300_0(300, 0)&#39; at 0x7fdd5836b0a0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_300_150(300, 150)&#39; at 0x7fdd583689a0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_300_25(300, 25)&#39; at 0x7fdd58368f70&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_300_50(300, 50)&#39; at 0x7fdd583692d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_300_75(300, 75)&#39; at 0x7fdd5836b910&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_325_0(325, 0)&#39; at 0x7fdd5836b970&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_325_50(325, 50)&#39; at 0x7fdd5836bac0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_350_0(350, 0)&#39; at 0x7fdd5836b490&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_350_100(350, 100)&#39; at 0x7fdd5836b5e0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_350_150(350, 150)&#39; at 0x7fdd5836bb50&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_350_200(350, 200)&#39; at 0x7fdd5836bd00&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_350_25(350, 25)&#39; at 0x7fdd5836bd90&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_350_50(350, 50)&#39; at 0x7fdd5836bdc0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_350_75(350, 75)&#39; at 0x7fdd5836be50&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_375_0(375, 0)&#39; at 0x7fdd5836beb0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_375_50(375, 50)&#39; at 0x7fdd5836bf10&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_400_0(400, 0)&#39; at 0x7fdd5836bf70&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_400_100(400, 100)&#39; at 0x7fdd5836bfd0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_400_150(400, 150)&#39; at 0x7fdd4ec70070&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_400_200(400, 200)&#39; at 0x7fdd4ec700d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_400_25(400, 25)&#39; at 0x7fdd4ec70130&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_400_250(400, 250)&#39; at 0x7fdd4ec70190&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_400_50(400, 50)&#39; at 0x7fdd4ec701f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_425_0(425, 0)&#39; at 0x7fdd4ec70250&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_450_0(450, 0)&#39; at 0x7fdd4ec702b0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_450_100(450, 100)&#39; at 0x7fdd4ec70310&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_450_150(450, 150)&#39; at 0x7fdd4ec70370&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_450_200(450, 200)&#39; at 0x7fdd4ec703d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_450_250(450, 250)&#39; at 0x7fdd4ec70430&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_450_300(450, 300)&#39; at 0x7fdd4ec70490&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_450_50(450, 50)&#39; at 0x7fdd4ec704f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_0(500, 0)&#39; at 0x7fdd4ec70550&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_100(500, 100)&#39; at 0x7fdd4ec705b0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_150(500, 150)&#39; at 0x7fdd4ec70610&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_200(500, 200)&#39; at 0x7fdd4ec70670&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_250(500, 250)&#39; at 0x7fdd4ec706d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_300(500, 300)&#39; at 0x7fdd4ec70730&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_350(500, 350)&#39; at 0x7fdd4ec70790&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_500_50(500, 50)&#39; at 0x7fdd4ec707f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_535_400(535, 400)&#39; at 0x7fdd4ec70850&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_550_0(550, 0)&#39; at 0x7fdd4ec708b0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_550_100(550, 100)&#39; at 0x7fdd4ec70910&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_550_150(550, 150)&#39; at 0x7fdd4ec70970&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_550_200(550, 200)&#39; at 0x7fdd4ec709d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_550_250(550, 250)&#39; at 0x7fdd4ec70a30&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_550_300(550, 300)&#39; at 0x7fdd4ec70a90&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_550_50(550, 50)&#39; at 0x7fdd4ec70af0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_0(600, 0)&#39; at 0x7fdd4ec70b50&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_100(600, 100)&#39; at 0x7fdd4ec70bb0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_150(600, 150)&#39; at 0x7fdd4ec70c10&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_200(600, 200)&#39; at 0x7fdd4ec70c70&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_250(600, 250)&#39; at 0x7fdd4ec70cd0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_300(600, 300)&#39; at 0x7fdd4ec70d30&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_350(600, 350)&#39; at 0x7fdd4ec70d90&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_400(600, 400)&#39; at 0x7fdd4ec70df0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_600_50(600, 50)&#39; at 0x7fdd4ec70e50&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_650_0(650, 0)&#39; at 0x7fdd4ec70eb0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_650_100(650, 100)&#39; at 0x7fdd4ec70f10&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_650_150(650, 150)&#39; at 0x7fdd4ec70f70&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_650_200(650, 200)&#39; at 0x7fdd4ec70fd0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_650_250(650, 250)&#39; at 0x7fdd4ec71030&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_650_300(650, 300)&#39; at 0x7fdd4ec71090&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_650_50(650, 50)&#39; at 0x7fdd4ec710f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_0(700, 0)&#39; at 0x7fdd4ec71150&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_100(700, 100)&#39; at 0x7fdd4ec711b0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_150(700, 150)&#39; at 0x7fdd4ec71210&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_200(700, 200)&#39; at 0x7fdd4ec71270&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_250(700, 250)&#39; at 0x7fdd4ec712d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_300(700, 300)&#39; at 0x7fdd4ec71330&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_350(700, 350)&#39; at 0x7fdd4ec71390&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_400(700, 400)&#39; at 0x7fdd4ec713f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_700_50(700, 50)&#39; at 0x7fdd4ec71450&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_750_100(750, 100)&#39; at 0x7fdd4ec714b0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_750_150(750, 150)&#39; at 0x7fdd4ec71510&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_750_200(750, 200)&#39; at 0x7fdd4ec71570&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_750_250(750, 250)&#39; at 0x7fdd4ec715d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_750_300(750, 300)&#39; at 0x7fdd4ec71630&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_750_50(750, 50)&#39; at 0x7fdd4ec71690&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_0(800, 0)&#39; at 0x7fdd4ec716f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_100(800, 100)&#39; at 0x7fdd4ec71750&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_150(800, 150)&#39; at 0x7fdd4ec717b0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_200(800, 200)&#39; at 0x7fdd4ec71810&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_250(800, 250)&#39; at 0x7fdd4ec71870&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_300(800, 300)&#39; at 0x7fdd4ec718d0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_350(800, 350)&#39; at 0x7fdd4ec71930&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_400(800, 400)&#39; at 0x7fdd4ec71990&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_800_50(800, 50)&#39; at 0x7fdd4ec719f0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_0(900, 0)&#39; at 0x7fdd4ec71a50&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_100(900, 100)&#39; at 0x7fdd4ec71ab0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_150(900, 150)&#39; at 0x7fdd4ec71b10&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_200(900, 200)&#39; at 0x7fdd4ec71b70&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_250(900, 250)&#39; at 0x7fdd4ec71bd0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_300(900, 300)&#39; at 0x7fdd4ec71c30&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_350(900, 350)&#39; at 0x7fdd4ec71c90&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_400(900, 400)&#39; at 0x7fdd4ec71cf0&gt;,
+ &lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_50(900, 50)&#39; at 0x7fdd4ec71d50&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we can see all the patches listed both by name such as <code class="docutils literal notranslate"><span class="pre">C1N2_Wh_hbb_900_250</span></code> as well as a pair of points <code class="docutils literal notranslate"><span class="pre">(900,</span> <span class="pre">250)</span></code>. Why is this useful? The <code class="docutils literal notranslate"><span class="pre">PatchSet</span></code> object acts like a special dictionary look-up where it will grab the patch you need based on the unique key you provide it.</p>
+<p>For example, we can look up by name</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">patchset</span><span class="p">[</span><span class="s2">&quot;C1N2_Wh_hbb_900_250&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_250(900, 250)&#39; at 0x7fdd4ec71bd0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>or by the pair of points</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">patchset</span><span class="p">[(</span><span class="mi">900</span><span class="p">,</span> <span class="mi">250</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyhf.patchset.Patch object &#39;C1N2_Wh_hbb_900_250(900, 250)&#39; at 0x7fdd4ec71bd0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="patches">
+<h3>Patches<a class="headerlink" href="#patches" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">pyhf.PatchSet</span></code> is a collection of <code class="docutils literal notranslate"><span class="pre">pyhf.Patch</span></code> objects. What is a patch indeed? It contains enough information about how to apply the signal patch to the corresponding background-only workspace (matched by digest).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">patch</span> <span class="o">=</span> <span class="n">patchset</span><span class="p">[</span><span class="s2">&quot;C1N2_Wh_hbb_900_250&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  name: </span><span class="si">{</span><span class="n">patch</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;values: </span><span class="si">{</span><span class="n">patch</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  name: C1N2_Wh_hbb_900_250
+values: (900, 250)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Most importantly, it contains the patch information itself. Specifically, this inherits from the <code class="docutils literal notranslate"><span class="pre">jsonpatch.JsonPatch</span></code> object, which is a 3rd party module providing native support for json patching in python. That means we can simply apply the patch to our workspace directly!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; samples pre-patch: </span><span class="si">{</span><span class="n">pyhf</span><span class="o">.</span><span class="n">Workspace</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;samples post-patch: </span><span class="si">{</span><span class="n">pyhf</span><span class="o">.</span><span class="n">Workspace</span><span class="p">(</span><span class="n">patch</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">spec</span><span class="p">))</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> samples pre-patch: [&#39;diboson&#39;, &#39;multiboson&#39;, &#39;singletop&#39;, &#39;ttbar&#39;, &#39;tth&#39;, &#39;ttv&#39;, &#39;vh&#39;, &#39;wjets&#39;, &#39;zjets&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>samples post-patch: [&#39;C1N2_Wh_hbb_900_250&#39;, &#39;diboson&#39;, &#39;multiboson&#39;, &#39;singletop&#39;, &#39;ttbar&#39;, &#39;tth&#39;, &#39;ttv&#39;, &#39;vh&#39;, &#39;wjets&#39;, &#39;zjets&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or, more quickly, from the <code class="docutils literal notranslate"><span class="pre">PatchSet</span></code> object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; samples pre-patch: </span><span class="si">{</span><span class="n">pyhf</span><span class="o">.</span><span class="n">Workspace</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;samples post-patch: </span><span class="si">{</span><span class="n">pyhf</span><span class="o">.</span><span class="n">Workspace</span><span class="p">(</span><span class="n">patchset</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="p">(</span><span class="mi">900</span><span class="p">,</span> <span class="mi">250</span><span class="p">)))</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> samples pre-patch: [&#39;diboson&#39;, &#39;multiboson&#39;, &#39;singletop&#39;, &#39;ttbar&#39;, &#39;tth&#39;, &#39;ttv&#39;, &#39;vh&#39;, &#39;wjets&#39;, &#39;zjets&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>samples post-patch: [&#39;C1N2_Wh_hbb_900_250&#39;, &#39;diboson&#39;, &#39;multiboson&#39;, &#39;singletop&#39;, &#39;ttbar&#39;, &#39;tth&#39;, &#39;ttv&#39;, &#39;vh&#39;, &#39;wjets&#39;, &#39;zjets&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="patching-via-model-creation">
+<h3>Patching via Model Creation<a class="headerlink" href="#patching-via-model-creation" title="Permalink to this headline">¶</a></h3>
+<p>One last way to apply the patching is to, instead of patching workspaces, we patch the models as we build them from the background-only workspace. This maybe makes it easier to treat the background-only workspace as immutable, and patch in signal models when grabbing the model. Check it out.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workspace</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">Workspace</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>First, load up our background-only spec into the workspace. Then let’s create a model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">workspace</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">patches</span><span class="o">=</span><span class="p">[</span><span class="n">patchset</span><span class="p">[</span><span class="s2">&quot;C1N2_Wh_hbb_900_250&quot;</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;samples (workspace): </span><span class="si">{</span><span class="n">workspace</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;samples (  model  ): </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">samples</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>samples (workspace): [&#39;diboson&#39;, &#39;multiboson&#39;, &#39;singletop&#39;, &#39;ttbar&#39;, &#39;tth&#39;, &#39;ttv&#39;, &#39;vh&#39;, &#39;wjets&#39;, &#39;zjets&#39;]
+samples (  model  ): [&#39;C1N2_Wh_hbb_900_250&#39;, &#39;diboson&#39;, &#39;multiboson&#39;, &#39;singletop&#39;, &#39;ttbar&#39;, &#39;tth&#39;, &#39;ttv&#39;, &#39;vh&#39;, &#39;wjets&#39;, &#39;zjets&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="doing-physics">
+<h2>Doing Physics<a class="headerlink" href="#doing-physics" title="Permalink to this headline">¶</a></h2>
+<p>So we want to try and reproduce part of the contour. At least convince ourselves we’re doing <em>physics</em> and not <em>fauxsics</em>. … Anyway… Let’s remind ourselves of the 1Lbb contour as we don’t have the photographic memory of the ATLAS SUSY conveners</p>
+<img alt="1Lbb exclusion contour" src="https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/SUSY-2019-08/fig_06.png" width="600" />
+<p>So let’s work around the 700-900 GeV <span class="math notranslate nohighlight">\(\tilde{\chi}_1^\pm, \tilde{\chi}_2^0\)</span> region. We’ll look at two points here:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C1N2_Wh_hbb_650_0(650,</span> <span class="pre">0)</span></code> which is below the contour and excluded</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C1N2_Wh_hbb_1000_0(1000,</span> <span class="pre">0)</span></code> which is above the contour and not excluded</p></li>
+</ul>
+<p>Let’s perform a “standard” hypothesis test (with <span class="math notranslate nohighlight">\(\mu = 1\)</span> null BSM hypothesis) on both of these and use the <span class="math notranslate nohighlight">\(\text{CL}_\text{s}\)</span> values to convince ourselves that we just did reproducible physics!?!</p>
+<div class="section" id="doing-physics-for-real-now">
+<h3>Doing Physics, for real now<a class="headerlink" href="#doing-physics-for-real-now" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_below</span> <span class="o">=</span> <span class="n">workspace</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">patches</span><span class="o">=</span><span class="p">[</span><span class="n">patchset</span><span class="p">[</span><span class="s2">&quot;C1N2_Wh_hbb_650_0&quot;</span><span class="p">]])</span>
+
+<span class="n">model_above</span> <span class="o">=</span> <span class="n">workspace</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">patches</span><span class="o">=</span><span class="p">[</span><span class="n">patchset</span><span class="p">[</span><span class="s2">&quot;C1N2_Wh_hbb_1000_0&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ve made our models. Let’s test hypotheses!</p>
+<p><em>Note: this will not be as instantaneous as our simple models…but it should still be pretty fast!</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_poi</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">result_below</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="n">test_poi</span><span class="p">,</span>
+    <span class="n">workspace</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="n">model_below</span><span class="p">),</span>
+    <span class="n">model_below</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Observed CLs: </span><span class="si">{</span><span class="n">result_below</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs band: </span><span class="si">{</span><span class="p">[</span><span class="n">exp</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">result_below</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/tensor/numpy_backend.py:352: RuntimeWarning: invalid value encountered in log
+  return n * np.log(lam) - lam - gammaln(n + 1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Observed CLs: 0.017137453243938467
+Expected CLs band: [4.841610903817407e-06, 9.132788376873106e-05, 0.001465942145443357, 0.0173282677685845, 0.12149743025501614]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_above</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="n">test_poi</span><span class="p">,</span>
+    <span class="n">workspace</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="n">model_above</span><span class="p">),</span>
+    <span class="n">model_above</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Observed CLs: </span><span class="si">{</span><span class="n">result_above</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs band: </span><span class="si">{</span><span class="p">[</span><span class="n">exp</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">result_above</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Observed CLs: 0.5856799952509247
+Expected CLs band: [0.049882076946509514, 0.12644962833432516, 0.29258296662229877, 0.5694172718087727, 0.8475980227021993]
+</pre></div>
+</div>
+</div>
+</div>
+<p>And as you can see, we’re getting results that we generally expect. Excluded models are those for which <span class="math notranslate nohighlight">\(\text{CL}_\text{s} &lt; 0.05\)</span>. Additionally, you can see that the expected bands <span class="math notranslate nohighlight">\(-2\sigma\)</span> for the <span class="math notranslate nohighlight">\((1000, 0)\)</span> point is just slightly below the observed result for the <span class="math notranslate nohighlight">\((650, 0)\)</span> point which is what we observe in the figure above.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="SimpleWorkspace.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction to Workspaces</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="PullPlot.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Making a Pull Plot</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By the pyhf development team<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

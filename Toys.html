@@ -1,0 +1,732 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing with Toys &#8212; pyhf Tutorial</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Performing a Combination" href="Combinations.html" />
+    <link rel="prev" title="Making a Pull Plot" href="PullPlot.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">pyhf Tutorial</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   pyhf Tutorial
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HelloWorld.html">
+   Introduction to HistFactory Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SimpleWorkspace.html">
+   Introduction to Workspaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SerializationAndPatching.html">
+   Using HEPData
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Common use and applications
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PullPlot.html">
+   Making a Pull Plot
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Playing with Toys
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Combinations.html">
+   Performing a Combination
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IntroToHiFa.html">
+   HistFactory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="WorkspaceManipulations.html">
+   Workspace Manipulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Modifiers.html">
+   Modifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UsingCalculators.html">
+   Using Calculators
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learn Fundamentals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="InterpolationCodes.html">
+   Piecewise Linear Interpolation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Toys.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/pyhf/pyhf-tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/pyhf/pyhf-tutorial/issues/new?title=Issue%20on%20page%20%2FToys.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/pyhf/pyhf-tutorial/edit/main/book/Toys.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main?urlpath=lab/tree/book/Toys.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/pyhf/pyhf-tutorial/blob/main/book/Toys.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-model-again">
+   Simple Model (again)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-revisited">
+   Hypothesis Testing (revisited)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-low-stats">
+   Hypothesis Testing (low stats)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Playing with Toys</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-model-again">
+   Simple Model (again)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-revisited">
+   Hypothesis Testing (revisited)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-low-stats">
+   Hypothesis Testing (low stats)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="playing-with-toys">
+<h1>Playing with Toys<a class="headerlink" href="#playing-with-toys" title="Permalink to this headline">¶</a></h1>
+<p>As of <code class="docutils literal notranslate"><span class="pre">v0.6.0</span></code>, <code class="docutils literal notranslate"><span class="pre">pyhf</span></code> now supports toys! A lot of kinks have been discovered and worked out and we’re grateful to our ATLAS colleagues for beta-testing this in the meantime. We don’t believe that there may not be any more bugs, but we feel confident that we can release the current implementation.</p>
+<div class="section" id="simple-model-again">
+<h2>Simple Model (again)<a class="headerlink" href="#simple-model-again" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyhf</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">simplemodels</span><span class="o">.</span><span class="n">uncorrelated_background</span><span class="p">(</span>
+    <span class="n">signal</span><span class="o">=</span><span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">],</span> <span class="n">bkg</span><span class="o">=</span><span class="p">[</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">],</span> <span class="n">bkg_uncertainty</span><span class="o">=</span><span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hypothesis-testing-revisited">
+<h2>Hypothesis Testing (revisited)<a class="headerlink" href="#hypothesis-testing-revisited" title="Permalink to this headline">¶</a></h2>
+<p>And like in the first exercise we did, let’s refresh what the hypothesis test looked like using <span class="math notranslate nohighlight">\(\tilde{q}_\mu\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CLs_obs</span><span class="p">,</span> <span class="n">CLs_exp</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># null hypothesis</span>
+    <span class="p">[</span><span class="mf">53.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Observed CLs: </span><span class="si">{</span><span class="n">CLs_obs</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">n_sigma</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">CLs_exp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs(</span><span class="si">{</span><span class="n">n_sigma</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> σ): </span><span class="si">{</span><span class="n">expected_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Observed CLs: 0.4957
+Expected CLs(-2 σ): 0.0832
+Expected CLs(-1 σ): 0.1828
+Expected CLs( 0 σ): 0.3705
+Expected CLs( 1 σ): 0.6437
+Expected CLs( 2 σ): 0.8854
+</pre></div>
+</div>
+</div>
+</div>
+<p>So the question is, does the asymptotic approximation hold in this example? The standard assumption is that you have enough “statistics” (meaning enough events) to use the large-N approximation. So let’s use the toy-based calculator instead and compute the same values as above and see if they match in the asymptotic case (we certainly hope they mostly do here!)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For readability in the Jupyter Book the <code class="docutils literal notranslate"><span class="pre">hypotest</span></code> has <code class="docutils literal notranslate"><span class="pre">track_progress=False</span></code>. If you’re running this notebook yourself you might want to set <code class="docutils literal notranslate"><span class="pre">track_progress=True</span></code> to enable the progress bar.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CLs_obs</span><span class="p">,</span> <span class="n">CLs_exp</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># null hypothesis</span>
+    <span class="p">[</span><span class="mf">53.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">calctype</span><span class="o">=</span><span class="s2">&quot;toybased&quot;</span><span class="p">,</span>
+    <span class="n">ntoys</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">track_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Observed CLs: </span><span class="si">{</span><span class="n">CLs_obs</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">n_sigma</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">CLs_exp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs(</span><span class="si">{</span><span class="n">n_sigma</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> σ): </span><span class="si">{</span><span class="n">expected_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">CLs_obs</span><span class="p">,</span> <span class="n">CLs_exp</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># null hypothesis</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="p">[</span><span class="mf">53.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">model</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">calctype</span><span class="o">=</span><span class="s2">&quot;toybased&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">ntoys</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">track_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Observed CLs: </span><span class="si">{</span><span class="n">CLs_obs</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="k">for</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">n_sigma</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">CLs_exp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/infer/__init__.py:160,</span> in <span class="ni">hypotest</span><span class="nt">(poi_test, data, pdf, init_pars, par_bounds, fixed_params, calctype, return_tail_probs, return_expected, return_expected_set, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span> <span class="n">calc</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">create_calculator</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>     <span class="n">calctype</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span>     <span class="n">data</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span> <span class="n">teststat</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">teststatistic</span><span class="p">(</span><span class="n">poi_test</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">160</span> <span class="n">sig_plus_bkg_distribution</span><span class="p">,</span> <span class="n">bkg_only_distribution</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">distributions</span><span class="p">(</span><span class="n">poi_test</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span> <span class="n">tb</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_backend</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span> <span class="n">CLsb_obs</span><span class="p">,</span> <span class="n">CLb_obs</span><span class="p">,</span> <span class="n">CLs_obs</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span>     <span class="n">tb</span><span class="o">.</span><span class="n">astensor</span><span class="p">(</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">for</span> <span class="n">pvalue</span> <span class="ow">in</span> <span class="n">calc</span><span class="o">.</span><span class="n">pvalues</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span>         <span class="n">teststat</span><span class="p">,</span> <span class="n">sig_plus_bkg_distribution</span><span class="p">,</span> <span class="n">bkg_only_distribution</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span> <span class="p">)</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/infer/calculators.py:739,</span> in <span class="ni">ToyCalculator.distributions</span><span class="nt">(self, poi_test, track_progress)</span>
+<span class="g g-Whitespace">    </span><span class="mi">736</span> <span class="n">bkg_teststat</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">    </span><span class="mi">737</span> <span class="k">for</span> <span class="n">sample</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="n">bkg_sample</span><span class="p">,</span> <span class="o">**</span><span class="n">tqdm_options</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Background-like&#39;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">738</span>     <span class="n">bkg_teststat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">739</span>         <span class="n">teststat_func</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">740</span>             <span class="n">poi_test</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">741</span>             <span class="n">sample</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">742</span>             <span class="bp">self</span><span class="o">.</span><span class="n">pdf</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">743</span>             <span class="bp">self</span><span class="o">.</span><span class="n">init_pars</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">744</span>             <span class="bp">self</span><span class="o">.</span><span class="n">par_bounds</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">745</span>             <span class="bp">self</span><span class="o">.</span><span class="n">fixed_params</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">746</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">747</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">749</span> <span class="n">s_plus_b</span> <span class="o">=</span> <span class="n">EmpiricalDistribution</span><span class="p">(</span><span class="n">tensorlib</span><span class="o">.</span><span class="n">astensor</span><span class="p">(</span><span class="n">signal_teststat</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">750</span> <span class="n">b_only</span> <span class="o">=</span> <span class="n">EmpiricalDistribution</span><span class="p">(</span><span class="n">tensorlib</span><span class="o">.</span><span class="n">astensor</span><span class="p">(</span><span class="n">bkg_teststat</span><span class="p">))</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/infer/test_statistics.py:189,</span> in <span class="ni">qmu_tilde</span><span class="nt">(mu, data, pdf, init_pars, par_bounds, fixed_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span> <span class="k">if</span> <span class="n">par_bounds</span><span class="p">[</span><span class="n">pdf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">poi_index</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span>         <span class="s1">&#39;qmu_tilde test statistic used for fit configuration with POI not bounded at zero.</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>         <span class="o">+</span> <span class="s1">&#39;Use the qmu test statistic (pyhf.infer.test_statistics.qmu) instead.&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">189</span> <span class="k">return</span> <span class="n">_qmu_like</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">init_pars</span><span class="p">,</span> <span class="n">par_bounds</span><span class="p">,</span> <span class="n">fixed_params</span><span class="p">)</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/infer/test_statistics.py:25,</span> in <span class="ni">_qmu_like</span><span class="nt">(mu, data, pdf, init_pars, par_bounds, fixed_params)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span><span class="sd"> Clipped version of _tmu_like where the returned test statistic</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span><span class="sd"> is 0 if muhat &gt; 0 else tmu_like_stat.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span><span class="sd"> qmu_tilde. Otherwise this is qmu (no tilde).</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">tensorlib</span><span class="p">,</span> <span class="n">optimizer</span> <span class="o">=</span> <span class="n">get_backend</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">25</span> <span class="n">tmu_like_stat</span><span class="p">,</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">muhatbhat</span><span class="p">)</span> <span class="o">=</span> <span class="n">_tmu_like</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">mu</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">init_pars</span><span class="p">,</span> <span class="n">par_bounds</span><span class="p">,</span> <span class="n">fixed_params</span><span class="p">,</span> <span class="n">return_fitted_pars</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="n">qmu_like_stat</span> <span class="o">=</span> <span class="n">tensorlib</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">muhatbhat</span><span class="p">[</span><span class="n">pdf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">poi_index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">mu</span><span class="p">,</span> <span class="n">tensorlib</span><span class="o">.</span><span class="n">astensor</span><span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="n">tmu_like_stat</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="k">return</span> <span class="n">qmu_like_stat</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/infer/test_statistics.py:44,</span> in <span class="ni">_tmu_like</span><span class="nt">(mu, data, pdf, init_pars, par_bounds, fixed_params, return_fitted_pars)</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span><span class="sd"> Basic Profile Likelihood test statistic.</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span><span class="sd"> If the lower bound of the POI is 0 this automatically implments</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="sd"> tmu_tilde. Otherwise this is tmu (no tilde).</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="n">tensorlib</span><span class="p">,</span> <span class="n">optimizer</span> <span class="o">=</span> <span class="n">get_backend</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">44</span> <span class="n">mubhathat</span><span class="p">,</span> <span class="n">fixed_poi_fit_lhood_val</span> <span class="o">=</span> <span class="n">fixed_poi_fit</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span>     <span class="n">mu</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">init_pars</span><span class="p">,</span> <span class="n">par_bounds</span><span class="p">,</span> <span class="n">fixed_params</span><span class="p">,</span> <span class="n">return_fitted_val</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">muhatbhat</span><span class="p">,</span> <span class="n">unconstrained_fit_lhood_val</span> <span class="o">=</span> <span class="n">fit</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span>     <span class="n">data</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">init_pars</span><span class="p">,</span> <span class="n">par_bounds</span><span class="p">,</span> <span class="n">fixed_params</span><span class="p">,</span> <span class="n">return_fitted_val</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="n">log_likelihood_ratio</span> <span class="o">=</span> <span class="n">fixed_poi_fit_lhood_val</span> <span class="o">-</span> <span class="n">unconstrained_fit_lhood_val</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/infer/mle.py:202,</span> in <span class="ni">fixed_poi_fit</span><span class="nt">(poi_val, data, pdf, init_pars, par_bounds, fixed_params, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">199</span> <span class="n">init_pars</span><span class="p">[</span><span class="n">pdf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">poi_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">poi_val</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span> <span class="n">fixed_params</span><span class="p">[</span><span class="n">pdf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">poi_index</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">--&gt; </span><span class="mi">202</span> <span class="k">return</span> <span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">init_pars</span><span class="p">,</span> <span class="n">par_bounds</span><span class="p">,</span> <span class="n">fixed_params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/infer/mle.py:131,</span> in <span class="ni">fit</span><span class="nt">(data, pdf, init_pars, par_bounds, fixed_params, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span> <span class="c1"># get fixed vals from the model</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span> <span class="n">fixed_vals</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span>     <span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">init</span><span class="p">)</span>
+<span class="nn">    127     for index, (init, is_fixed)</span> in <span class="ni">enumerate(zip</span><span class="nt">(init_pars, fixed_params))</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span>     <span class="k">if</span> <span class="n">is_fixed</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span> <span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">131</span> <span class="k">return</span> <span class="n">opt</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span>     <span class="n">twice_nll</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">init_pars</span><span class="p">,</span> <span class="n">par_bounds</span><span class="p">,</span> <span class="n">fixed_vals</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="p">)</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/optimize/mixins.py:184,</span> in <span class="ni">OptimizerMixin.minimize</span><span class="nt">(self, objective, data, pdf, init_pars, par_bounds, fixed_vals, return_fitted_val, return_result_obj, return_uncertainties, return_correlations, do_grad, do_stitch, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>         <span class="n">par_names</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span>     <span class="n">par_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">par_names</span> <span class="k">if</span> <span class="n">name</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">184</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_minimize</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="o">**</span><span class="n">minimizer_kwargs</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">par_names</span><span class="o">=</span><span class="n">par_names</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_postprocess</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="n">result</span><span class="p">,</span> <span class="n">stitch_pars</span><span class="p">,</span> <span class="n">return_uncertainties</span><span class="o">=</span><span class="n">return_uncertainties</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="n">_returns</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span><span class="o">.</span><span class="n">x</span><span class="p">]</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/optimize/mixins.py:50,</span> in <span class="ni">OptimizerMixin._internal_minimize</span><span class="nt">(self, func, x0, do_grad, bounds, fixed_vals, options, par_names)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="k">def</span> <span class="nf">_internal_minimize</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span>     <span class="n">func</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span>     <span class="n">par_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="n">minimizer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_minimizer</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>         <span class="n">func</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>         <span class="n">x0</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="n">par_names</span><span class="o">=</span><span class="n">par_names</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">50</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_minimize</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>         <span class="n">minimizer</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="n">func</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>         <span class="n">x0</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>         <span class="n">do_grad</span><span class="o">=</span><span class="n">do_grad</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span>         <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>         <span class="n">fixed_vals</span><span class="o">=</span><span class="n">fixed_vals</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>         <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>         <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">success</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/pyhf/optimize/opt_scipy.py:93,</span> in <span class="ni">scipy_optimizer._minimize</span><span class="nt">(self, minimizer, func, x0, do_grad, bounds, fixed_vals, options)</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">91</span>     <span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">---&gt; </span><span class="mi">93</span> <span class="k">return</span> <span class="n">minimizer</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">func</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">x0</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>     <span class="n">jac</span><span class="o">=</span><span class="n">do_grad</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span>     <span class="n">tol</span><span class="o">=</span><span class="n">tolerance</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">maxiter</span><span class="o">=</span><span class="n">maxiter</span><span class="p">,</span> <span class="n">disp</span><span class="o">=</span><span class="nb">bool</span><span class="p">(</span><span class="n">verbose</span><span class="p">),</span> <span class="o">**</span><span class="n">solver_options</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="p">)</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/scipy/optimize/_minimize.py:701,</span> in <span class="ni">minimize</span><span class="nt">(fun, x0, args, method, jac, hess, hessp, bounds, constraints, tol, callback, options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">698</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">_minimize_cobyla</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">constraints</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">callback</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span>                             <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="k">elif</span> <span class="n">meth</span> <span class="o">==</span> <span class="s1">&#39;slsqp&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">701</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">_minimize_slsqp</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">jac</span><span class="p">,</span> <span class="n">bounds</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span>                           <span class="n">constraints</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">callback</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">elif</span> <span class="n">meth</span> <span class="o">==</span> <span class="s1">&#39;trust-constr&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">_minimize_trustregion_constr</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">jac</span><span class="p">,</span> <span class="n">hess</span><span class="p">,</span> <span class="n">hessp</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>                                        <span class="n">bounds</span><span class="p">,</span> <span class="n">constraints</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>                                        <span class="n">callback</span><span class="o">=</span><span class="n">callback</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/scipy/optimize/_slsqp_py.py:433,</span> in <span class="ni">_minimize_slsqp</span><span class="nt">(func, x0, args, jac, bounds, constraints, maxiter, ftol, iprint, disp, eps, callback, finite_diff_rel_step, **unknown_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>  <span class="c1"># gradient evaluation required</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span>     <span class="n">g</span> <span class="o">=</span> <span class="n">append</span><span class="p">(</span><span class="n">wrapped_grad</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">433</span>     <span class="n">a</span> <span class="o">=</span> <span class="n">_eval_con_normals</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">cons</span><span class="p">,</span> <span class="n">la</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">meq</span><span class="p">,</span> <span class="n">mieq</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> <span class="k">if</span> <span class="n">majiter</span> <span class="o">&gt;</span> <span class="n">majiter_prev</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">436</span>     <span class="c1"># call callback if major iteration has incremented</span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span>     <span class="k">if</span> <span class="n">callback</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /__t/Python/3.10.5/x64/lib/python3.10/site-packages/scipy/optimize/_slsqp_py.py:491,</span> in <span class="ni">_eval_con_normals</span><span class="nt">(x, cons, la, n, m, meq, mieq)</span>
+<span class="g g-Whitespace">    </span><span class="mi">488</span> <span class="k">else</span><span class="p">:</span>  <span class="c1"># no equality constraint</span>
+<span class="g g-Whitespace">    </span><span class="mi">489</span>     <span class="n">a_eq</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">meq</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">491</span> <span class="k">if</span> <span class="n">cons</span><span class="p">[</span><span class="s1">&#39;ineq&#39;</span><span class="p">]:</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span>     <span class="n">a_ieq</span> <span class="o">=</span> <span class="n">vstack</span><span class="p">([</span><span class="n">con</span><span class="p">[</span><span class="s1">&#39;jac&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">con</span><span class="p">[</span><span class="s1">&#39;args&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>                     <span class="k">for</span> <span class="n">con</span> <span class="ow">in</span> <span class="n">cons</span><span class="p">[</span><span class="s1">&#39;ineq&#39;</span><span class="p">]])</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span> <span class="k">else</span><span class="p">:</span>  <span class="c1"># no inequality constraint</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>You’ll notice that this time, a progress bar pops up! This is running the fits for each of these toys. We’re hard at work to find new ways to improve the performance of this, but evaluating 50+ toys/s is not very bad for the initial implementation.</p>
+<p>Overall, this is not so bad given that we’re only running 1000 toys. What does this look like in a case where we have lower statistics?</p>
+</div>
+<div class="section" id="hypothesis-testing-low-stats">
+<h2>Hypothesis Testing (low stats)<a class="headerlink" href="#hypothesis-testing-low-stats" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_low</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">simplemodels</span><span class="o">.</span><span class="n">uncorrelated_background</span><span class="p">(</span>
+    <span class="n">signal</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="n">bkg</span><span class="o">=</span><span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">],</span> <span class="n">bkg_uncertainty</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the asymptotics case:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CLs_obs</span><span class="p">,</span> <span class="n">CLs_exp</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># null hypothesis</span>
+    <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">calctype</span><span class="o">=</span><span class="s2">&quot;asymptotics&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Observed CLs: </span><span class="si">{</span><span class="n">CLs_obs</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">n_sigma</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">CLs_exp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs(</span><span class="si">{</span><span class="n">n_sigma</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> σ): </span><span class="si">{</span><span class="n">expected_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And now throwing 2000 toys:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CLs_obs</span><span class="p">,</span> <span class="n">CLs_exp</span> <span class="o">=</span> <span class="n">pyhf</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">hypotest</span><span class="p">(</span>
+    <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># null hypothesis</span>
+    <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">]</span> <span class="o">+</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">auxdata</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">,</span>
+    <span class="n">test_stat</span><span class="o">=</span><span class="s2">&quot;qtilde&quot;</span><span class="p">,</span>
+    <span class="n">return_expected_set</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">calctype</span><span class="o">=</span><span class="s2">&quot;toybased&quot;</span><span class="p">,</span>
+    <span class="n">ntoys</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">track_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Observed CLs: </span><span class="si">{</span><span class="n">CLs_obs</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">expected_value</span><span class="p">,</span> <span class="n">n_sigma</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">CLs_exp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected CLs(</span><span class="si">{</span><span class="n">n_sigma</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> σ): </span><span class="si">{</span><span class="n">expected_value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And as you can see in the case of lower statistics, the asymptotic approximation starts failing!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="PullPlot.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Making a Pull Plot</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Combinations.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Performing a Combination</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By the pyhf development team<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
