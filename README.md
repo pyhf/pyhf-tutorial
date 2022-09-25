@@ -2,7 +2,7 @@
 
 Tutorial last given at the [April 2021 PyHEP topical meeting](https://indico.cern.ch/event/985425/).
 
-**The tutorial is based off of [`pyhf` `v0.6.3`](https://pypi.org/project/pyhf/0.6.3/)**
+**The tutorial is based off of [`pyhf` `v0.7.0`](https://pypi.org/project/pyhf/0.7.0/)**
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main?urlpath=lab)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4670321.svg)](https://doi.org/10.5281/zenodo.4670321)
