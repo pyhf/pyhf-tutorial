@@ -29,7 +29,7 @@ Instead, let's move to looking at the `pyhf` API right away.
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install -U pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
 ```
 :::
 
@@ -98,7 +98,7 @@ If you're installing from PyPI, you can also install with some of the "extras" t
 
 :::{tab-item} Read/Write XML+ROOT
 ```
-(pyhf-tutorial) $ python -m pip install pyhf[xmlio]
+(pyhf-tutorial) $ python -m pip install 'pyhf[xmlio]'
 ```
 
 The 'xmlio' extra additionally installs [`uproot`](https://github.com/scikit-hep/uproot4) to read `ROOT` files.
@@ -106,7 +106,7 @@ The 'xmlio' extra additionally installs [`uproot`](https://github.com/scikit-hep
 
 :::{tab-item} Use PyTorch and Tensorflow
 ```
-(pyhf-tutorial) $ python -m pip install pyhf[torch,tensorflow]
+(pyhf-tutorial) $ python -m pip install 'pyhf[torch,tensorflow]'
 ```
 
 The 'torch' extra installs [`pytorch`](https://pytorch.org/) and the 'tensorflow' extra installs [`tensorflow`](https://www.tensorflow.org/).
@@ -114,7 +114,7 @@ The 'torch' extra installs [`pytorch`](https://pytorch.org/) and the 'tensorflow
 
 :::{tab-item} Using Minuit Optimization
 ```
-(pyhf-tutorial) $ python -m pip install pyhf[minuit]
+(pyhf-tutorial) $ python -m pip install 'pyhf[minuit]'
 ```
 
 The 'minuit' extra installs [`iminuit`](https://iminuit.readthedocs.io/).
