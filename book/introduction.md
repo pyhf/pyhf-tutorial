@@ -23,16 +23,17 @@ Instead, let's move to looking at the `pyhf` API right away.
 
 ### Make a Virtual Environment
 
-````{tabbed} Locally
+::::{tab-set}
+
+:::{tab-item} Locally
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install -U pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
 ```
-````
+:::
 
-````{tabbed} On CC7 lxplus/tier-3
-
+:::{tab-item} On CC7 lxplus/tier-3
 First we need to set up the 'views' with the right paths to ensure we use the correct `pip`
 
 ```
@@ -47,12 +48,11 @@ Then we can go ahead and create the virtual environment
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install -U pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
 ```
-````
+:::
 
-````{tabbed} On SLC6 lxplus/tier-3
-
+:::{tab-item} On SLC6 lxplus/tier-3
 First we need to set up the 'views' with the right paths to ensure we use the correct `pip`
 
 ```
@@ -67,9 +67,11 @@ Then we can go ahead and create the virtual environment
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install -U pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
 ```
-````
+:::
+
+::::
 
 Once you have a virtual environment set up, you can use `source pyhf-tutorial/bin/activate` to get back into it again. Note the prefix `(pyhf-tutorial) $` on your command line, which indicates that you're inside a virtual environment named 'pyhf-tutorial'.
 
@@ -92,30 +94,33 @@ If you haven't already, make a new Python 3 virtual environment and then install
 
 If you're installing from PyPI, you can also install with some of the "extras" that will be useful for doing typical HEP analysis workflows with `pyhf`.
 
-````{tabbed} Read/Write XML+ROOT
+::::{tab-set}
+
+:::{tab-item} Read/Write XML+ROOT
 ```
-(pyhf-tutorial) $ python -m pip install pyhf[xmlio]
+(pyhf-tutorial) $ python -m pip install 'pyhf[xmlio]'
 ```
 
 The 'xmlio' extra additionally installs [`uproot`](https://github.com/scikit-hep/uproot4) to read `ROOT` files.
-````
+:::
 
-````{tabbed} Use PyTorch and Tensorflow
+:::{tab-item} Use PyTorch and Tensorflow
 ```
-(pyhf-tutorial) $ python -m pip install pyhf[torch,tensorflow]
+(pyhf-tutorial) $ python -m pip install 'pyhf[torch,tensorflow]'
 ```
 
 The 'torch' extra installs [`pytorch`](https://pytorch.org/) and the 'tensorflow' extra installs [`tensorflow`](https://www.tensorflow.org/).
-````
+:::
 
-````{tabbed} Using Minuit Optimization
+:::{tab-item} Using Minuit Optimization
 ```
-(pyhf-tutorial) $ python -m pip install pyhf[minuit]
+(pyhf-tutorial) $ python -m pip install 'pyhf[minuit]'
 ```
 
 The 'minuit' extra installs [`iminuit`](https://iminuit.readthedocs.io/).
-````
+:::
 
+::::
 
 See our [installation docs](https://pyhf.readthedocs.io/en/v0.7.0/installation.html) for more information about installation options.
 
