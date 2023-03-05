@@ -19,8 +19,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip setuptools wheel
-        python -m pip --no-cache-dir install -r binder/requirements.txt
-        python -m pip --no-cache-dir install -r book/requirements.txt
+        python -m pip --no-cache-dir install --requirement binder/requirements.txt --requirement book/requirements.txt
 
     - name: List installed Python packages
       run: |
