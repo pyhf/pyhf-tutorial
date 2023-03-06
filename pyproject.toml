@@ -6,6 +6,7 @@ exclude = '''
     \.git
   | .eggs
   | build
+  | .nox
 )/
 '''
 

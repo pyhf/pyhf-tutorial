@@ -15,8 +15,7 @@ Tutorial last given at the [April 2021 PyHEP topical meeting](https://indico.cer
 In a Python virtual environment run the following
 
 ```
-python -m pip install -r binder/requirements.txt
-python -m pip install -r book/requirements.txt
+python -m pip install --require-hashes --requirement book/requirements.lock
 ```
 
 ## Build
