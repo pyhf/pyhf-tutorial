@@ -28,13 +28,17 @@ def lock(session: nox.Session) -> None:
         external=True,
         silent=True,
     )
-    with open(f"{DIR / 'requirements.txt'}", "w", encoding="utf8") as out_file:
+    intermediate_requirements = DIR / "requirements.txt"
+    with open(f"{intermediate_requirements}", "w", encoding="utf8") as out_file:
         out_file.write(out.strip() + "\n")
+
     session.run(
         "pip-compile",
         "--resolver=backtracking",
         "--generate-hashes",
         "--output-file",
         f"{DIR / 'book' / 'requirements.lock'}",
-        f"{DIR / 'requirements.txt'}",
+        intermediate_requirements,
     )
+    if intermediate_requirements.exists():
+        intermediate_requirements.unlink()
