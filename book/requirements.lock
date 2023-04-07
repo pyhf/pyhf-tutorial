@@ -983,6 +983,7 @@ numpy==1.24.2 \
     #   iminuit
     #   matplotlib
     #   pandas
+    #   pyhf
     #   scipy
     #   uproot
 packaging==23.0 \
@@ -1197,9 +1198,9 @@ pygments==2.14.0 \
     #   pydata-sphinx-theme
     #   qtconsole
     #   sphinx
-pyhf[contrib,minuit,xmlio]==0.7.0 \
-    --hash=sha256:6513563e72ff8b6635676f2d2abfcfd015b654cafbdcd4b5b72834152e4f029b \
-    --hash=sha256:cf2c7dc9456ef0fadb6b52c041b905cc973b2c83f954390ba65b45ab74916879
+pyhf[contrib,minuit,xmlio]==0.7.1 \
+    --hash=sha256:1a3007bb2858bab2ffee37cd7b2fe4a0dd3faf18cc49c45f6696c299880dfadf \
+    --hash=sha256:26a5058c4ec89e5116925ca16559087e733612ebbf2da005f4202c6b7200def2
     # via -r /home/feickert/Code/GitHub/tutorials/pyhf-tutorial/requirements.txt
 pyparsing==3.0.9 \
     --hash=sha256:2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb \
