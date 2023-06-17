@@ -3,7 +3,7 @@
 ## Welcome!
 
 <p align="center">
-<a href="https://github.com/scikit-hep/pyhf"><img src="https://raw.githubusercontent.com/scikit-hep/pyhf/master/docs/_static/img/pyhf-logo-small.png"></a>
+<a href="https://github.com/scikit-hep/pyhf"><img src="https://raw.githubusercontent.com/scikit-hep/pyhf/main/docs/_static/img/pyhf-logo.svg"></a>
 </p>
 
 Welcome to the `pyhf` tutorial!
