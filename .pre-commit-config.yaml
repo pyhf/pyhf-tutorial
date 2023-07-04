@@ -21,7 +21,7 @@ repos:
     - id: trailing-whitespace
 
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
+    rev: v3.8.0
     hooks:
     -   id: pyupgrade
 
@@ -31,7 +31,7 @@ repos:
     - id: black-jupyter
 
 -   repo: https://github.com/codespell-project/codespell
-    rev: v2.2.4
+    rev: v2.2.5
     hooks:
     - id: codespell
       files: ^.*\.(py|md|rst)$
