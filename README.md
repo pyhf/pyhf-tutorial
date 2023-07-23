@@ -28,6 +28,7 @@ make build
 
 ## Past tutorials
 
+* [DANCE/CoDaS Workshop 2022](https://indico.cern.ch/event/1151329/) (2022-07-22)
 * [PyHEP Topical Meeting April 2021](https://indico.cern.ch/event/985425/) (2021-04-07)
    - [![Zendo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4670322.svg)](https://doi.org/10.5281/zenodo.4670322)
 * [LHC Reinterpretation Forum Workshop 2021](https://indico.cern.ch/event/982553/contributions/4219487/) (2021-02-18)
