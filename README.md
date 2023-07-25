@@ -5,6 +5,7 @@ Tutorial last given at the [April 2021 PyHEP topical meeting](https://indico.cer
 **The tutorial is based off of [`pyhf` `v0.7.2`](https://pypi.org/project/pyhf/0.7.2/)**
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main?urlpath=lab)
+[![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://pyhf.github.io/pyhf-tutorial/live/lab/index.html?path=jupyterlite.ipynb)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4670321.svg)](https://doi.org/10.5281/zenodo.4670321)
 
 [![Deploy Jupyter Book](https://github.com/pyhf/pyhf-tutorial/workflows/Deploy%20Jupyter%20Book/badge.svg?branch=main)](https://pyhf.github.io/pyhf-tutorial/)
