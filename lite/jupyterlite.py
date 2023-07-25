@@ -12,8 +12,6 @@
 # %% [markdown]
 # * To run the code, click on the first cell (gray box) and press <kbd>Shift</kbd>+<kbd>Enter</kbd> or click on the (Run) ▶ button to run each cell.
 # * Alternatively, from the `Run` menu select `Run All Cells`.
-#
-# You will need to copy and paste the following block into the top of each notebook.
 
 # %%
 import micropip
