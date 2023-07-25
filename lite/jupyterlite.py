@@ -16,11 +16,20 @@
 # You will need to copy and paste the following block into the top of each notebook.
 
 # %%
-import piplite
+import micropip
 
 # Install pyhf in the browser
-await piplite.install(["pyhf==0.7.2", "matplotlib>=3.0.0"])
+await micropip.install(["pyhf==0.7.2", "matplotlib>=3.0.0"])
 # %matplotlib inline
 import pyhf
 
 # You can now use pyhf!
+
+# %% [markdown]
+# Based on the way that Pyodide works with [third party packages](https://pyodide.org/en/stable/usage/packages-in-pyodide.html), you'll need to place the following cell at the top of each notebook that you'll use `pyhf` in.
+
+# %%
+import micropip
+
+# Install pyhf in the browser
+await micropip.install(["pyhf==0.7.2", "matplotlib>=3.0.0"])
