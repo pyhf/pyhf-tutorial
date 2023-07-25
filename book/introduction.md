@@ -71,7 +71,7 @@ $ source pyhf-tutorial/bin/activate
 ```
 :::
 
-:::{tab-item} In your browser with WebAssembly
+:::{tab-item} In your browser
 
 As `pyhf` is pure Python it is possible to install and run a version of it directly in your browser using [Pyodide](https://pyodide.org/).
 You can try out the live WebAssembly version of the user guide in [JupyterLite](https://jupyterlite.readthedocs.io/) now by visiting the [live view of the website](https://pyhf.github.io/pyhf-tutorial/live/lab/index.html?path=jupyterlite.ipynb).
