@@ -59,11 +59,18 @@ jobs:
     - name: Install pyodide
       run: |
         python -m pip install --upgrade pip setuptools wheel
-        python -m pip install --upgrade "jupyterlite[lab]"
+        python -m pip install --upgrade \
+          "jupyterlite[lab]" \
+          "jupytext>=1.14.0"
 
     - name: List installed Python packages
       run: |
         python -m pip list
+
+    - name: Convert .py to notebook
+      run: |
+        jupytext --to notebook lite/jupyterlite.py
+        cp lite/jupyterlite.ipynb  book/index.ipynb
 
     - name: Build the Pyodide output
       run: |
@@ -76,7 +83,7 @@ jobs:
         name: jupyterlite
         path: _output/
 
-  deploy-book:
+  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
