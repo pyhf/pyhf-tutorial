@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: jupyterbook
-        path: _build/html/
+        path: 'book/_build/html/'
 
   build-pyodide:
     runs-on: ubuntu-latest
