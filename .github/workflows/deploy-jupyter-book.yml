@@ -74,8 +74,10 @@ jobs:
 
     - name: Build the Pyodide output
       run: |
+        jupyter lite --help
         jupyter lite init
         jupyter lite build --contents=book
+        jupyter lite check
 
     - name: Upload Pyodide build
       uses: actions/upload-artifact@v3
