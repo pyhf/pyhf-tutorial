@@ -95,8 +95,7 @@ If you haven't already, make a new Python 3 virtual environment and then install
  or [Conda-forge](https://anaconda.org/conda-forge/pyhf)
 
 ```
-(pyhf-tutorial) $ conda config --add channels conda-forge
-(pyhf-tutorial) $ conda install pyhf
+(pyhf-tutorial) $ conda install --channel conda-forge pyhf
 ```
 
 ### Installation Extras
@@ -135,16 +134,23 @@ See our [installation docs](https://pyhf.readthedocs.io/en/v0.7.2/installation.h
 
 ### Dependencies for this tutorial
 
-To get all the dependencies needed for this tutorial you can just install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
+To get all the dependencies needed for this tutorial first clone the repository locally
 
 ```
-(pyhf-tutorial) $ python -m pip install -r binder/requirements.txt
+(pyhf-tutorial) $ git clone https://github.com/pyhf/pyhf-tutorial.git
+(pyhf-tutorial) $ cd pyhf-tutorial
+```
+
+then you can just install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
+
+```
+(pyhf-tutorial) $ python -m pip install --upgrade --requirement binder/requirements.txt
 ```
 
 If you want to also get the dependencies to build and explore the Jupyter Book form of the tutorial you can install them with
 
 ```
-(pyhf-tutorial) $ python -m pip install -r book/requirements.txt
+(pyhf-tutorial) $ python -m pip install --upgrade --requirement book/requirements.txt
 ```
 
 ### Citation
