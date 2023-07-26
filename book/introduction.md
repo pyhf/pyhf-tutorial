@@ -95,8 +95,7 @@ If you haven't already, make a new Python 3 virtual environment and then install
  or [Conda-forge](https://anaconda.org/conda-forge/pyhf)
 
 ```
-(pyhf-tutorial) $ conda config --add channels conda-forge
-(pyhf-tutorial) $ conda install pyhf
+(pyhf-tutorial) $ conda install --channel conda-forge pyhf
 ```
 
 ### Installation Extras
