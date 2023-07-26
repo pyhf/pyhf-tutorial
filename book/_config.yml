@@ -2,7 +2,7 @@
 # Book settings
 title: 'pyhf Tutorial'
 author: the pyhf development team
-logo: assets/logo.png
+logo: assets/pyhf-logo.svg
 
 # HTML-specific settings
 html:
