@@ -1,7 +1,5 @@
 # `pyhf` Tutorial
 
-Tutorial last given at the [April 2021 PyHEP topical meeting](https://indico.cern.ch/event/985425/).
-
 **The tutorial is based off of [`pyhf` `v0.7.2`](https://pypi.org/project/pyhf/0.7.2/)**
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pyhf/pyhf-tutorial/main?urlpath=lab)
@@ -29,6 +27,7 @@ make build
 
 ## Past tutorials
 
+* [Computational HEP Traineeship Summer School 2023](https://indico.cern.ch/event/1293313/) (2023-07-26)
 * [DANCE/CoDaS Workshop 2022](https://indico.cern.ch/event/1151329/) (2022-07-22)
 * [PyHEP Topical Meeting April 2021](https://indico.cern.ch/event/985425/) (2021-04-07)
    - [![Zendo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4670322.svg)](https://doi.org/10.5281/zenodo.4670322)
