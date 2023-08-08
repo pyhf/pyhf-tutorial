@@ -1,1 +1,2 @@
 jupyter-book==0.15.1
+rich==12.6.0
