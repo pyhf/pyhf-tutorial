@@ -133,3 +133,6 @@ _build
 *.tar.gz
 book/data/
 book/1Lbb-likelihoods/
+
+# Mac artifacts
+.DS_Store
