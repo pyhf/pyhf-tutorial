@@ -13,6 +13,7 @@ parts:
   - file: PullPlot
   - file: Toys
   - file: Combinations
+  - file: UpperLimitsTable
 
 - caption: More Information
   chapters:
