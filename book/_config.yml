@@ -4,6 +4,9 @@ title: 'pyhf Tutorial'
 author: the pyhf development team
 logo: assets/pyhf-logo.svg
 
+execute:
+  timeout: 300  # seconds (5 minutes)
+
 # HTML-specific settings
 html:
   use_repository_button: true
