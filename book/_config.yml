@@ -5,7 +5,7 @@ author: the pyhf development team
 logo: assets/pyhf-logo.svg
 
 execute:
-  timeout: 120  # seconds (2 minutes)
+  timeout: 120  # seconds
 
 # HTML-specific settings
 html:
