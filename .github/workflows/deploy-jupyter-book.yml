@@ -38,7 +38,9 @@ jobs:
     - name: Set track_progress=False for notebooks
       run: |
         # git grep --name-only "track_progress=True" | xargs sed --in-place 's/track_progress=True/track_progress=False/g'
-        grep --files-with-matches --recursive "track_progress=True" book | xargs sed --in-place 's/track_progress=True/track_progress=False/g'
+        # grep --files-with-matches --recursive "track_progress=True" book | xargs sed --in-place 's/track_progress=True/track_progress=False/g'
+        # DEBUG: Just list
+        grep --files-with-matches --recursive "track_progress=True" book
 
     - name: Build the book
       run: |
