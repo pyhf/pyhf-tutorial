@@ -1,4 +1,4 @@
-pyhf[xmlio,minuit,contrib]==0.7.3
+pyhf[xmlio,minuit,contrib]==0.7.4
 # visualization
 ipywidgets~=8.0.7
 ipympl~=0.9.3
