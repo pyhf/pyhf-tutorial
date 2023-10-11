@@ -17,7 +17,7 @@
 import micropip
 
 # Install pyhf in the browser
-await micropip.install(["pyhf==0.7.3", "matplotlib>=3.0.0"])
+await micropip.install(["pyhf==0.7.4", "matplotlib>=3.0.0"])
 # %matplotlib inline
 import pyhf
 
@@ -30,4 +30,4 @@ import pyhf
 import micropip
 
 # Install pyhf in the browser
-await micropip.install(["pyhf==0.7.3", "matplotlib>=3.0.0"])
+await micropip.install(["pyhf==0.7.4", "matplotlib>=3.0.0"])

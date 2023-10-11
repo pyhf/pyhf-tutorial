@@ -1143,9 +1143,9 @@ pygments==2.15.1 \
     #   pydata-sphinx-theme
     #   rich
     #   sphinx
-pyhf[contrib,minuit,xmlio]==0.7.3 \
-    --hash=sha256:11647c79a515be65c061780fb9e06a885195fba2774c5d4ccce6da1a30781064 \
-    --hash=sha256:175d5e69b0c73d161b7601c1ae158d4ddb3745c0eaea4c0d295f10cdac9ef9b4
+pyhf[contrib,minuit,xmlio]==0.7.4 \
+    --hash=sha256:76b73d6e91b169bb1fd3d011375ca0340ec353730ad7f3a006e80331f63ec123 \
+    --hash=sha256:92c148ec1e07b04a72d60a2d7ac9202c92813c453daa9a443e05485e02c88ee3
     # via -r /home/feickert/Code/GitHub/pyhf-org/pyhf-tutorial/requirements.txt
 pyparsing==3.0.9 \
     --hash=sha256:2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb \
