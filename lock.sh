@@ -1,10 +1,19 @@
 #!/bin/bash
 
+# setup server to be multi-platform
+if [[ "$(uname -m)" != "x86_64" ]]; then
+    docker pull tonistiigi/binfmt
+    docker run --privileged --rm tonistiigi/binfmt --install amd64
+fi
+
 BUILD_IMAGE="python:3.11-slim-bookworm"
-docker pull "${BUILD_IMAGE}"
+docker pull \
+    --platform linux/amd64 \
+    "${BUILD_IMAGE}"
 
 docker run \
     --rm \
+    --platform linux/amd64 \
     --volume "${PWD}":/read:ro \
     --volume "${PWD}/book":/write \
     --workdir /work \
