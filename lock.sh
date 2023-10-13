@@ -6,7 +6,8 @@ if [[ "$(uname -m)" != "x86_64" ]]; then
     docker run --privileged --rm tonistiigi/binfmt --install amd64
 fi
 
-BUILD_IMAGE="python:3.11-slim-bookworm"
+# Match CPython version with Docker image that contians ROOT
+BUILD_IMAGE="python:3.10-slim-bookworm"
 docker pull \
     --platform linux/amd64 \
     "${BUILD_IMAGE}"
