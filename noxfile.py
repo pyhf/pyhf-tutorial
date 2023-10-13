@@ -44,7 +44,7 @@ def lock(session: nox.Session) -> None:
         intermediate_requirements.unlink()
 
 
-@nox.session(venv_backend=None)
+@nox.session(venv_backend="none")
 def docker(session: nox.Session) -> None:
     """
     Build a lock file with pip-tools using Docker
