@@ -1,11 +1,8 @@
 #!/bin/bash
 
-# This should be the base image the Docker image built by the GitHub Action uses
 BUILD_IMAGE="python:3.11-slim-bookworm"
 docker pull "${BUILD_IMAGE}"
 
-# Don't need to ensure emulation possible on non-x86_64 platforms at the
-# `docker run` level as the platform is specified in the conda-lock command.
 docker run \
     --rm \
     --volume "${PWD}":/read:ro \
