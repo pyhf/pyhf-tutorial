@@ -25,6 +25,20 @@ To build the book after setup simply run
 make build
 ```
 
+## Build lock file
+
+To build a `pip-compile` lock file for local use `nox`
+
+```
+nox
+```
+
+To build a lock file for deployment use Docker to avoid differences between operating systems with
+
+```
+bash lock.sh
+```
+
 ## Past tutorials
 
 * [Computational HEP Traineeship Summer School 2023](https://indico.cern.ch/event/1293313/) (2023-07-26)
