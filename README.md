@@ -39,6 +39,12 @@ To build a lock file for deployment use Docker to avoid differences between oper
 bash lock.sh
 ```
 
+or
+
+```
+nox --session docker
+```
+
 ## Past tutorials
 
 * [Computational HEP Traineeship Summer School 2023](https://indico.cern.ch/event/1293313/) (2023-07-26)
