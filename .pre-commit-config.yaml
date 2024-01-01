@@ -5,7 +5,7 @@ ci:
 repos:
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
     - id: check-added-large-files
     - id: check-case-conflict
@@ -21,12 +21,12 @@ repos:
     - id: trailing-whitespace
 
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.14.0
+    rev: v3.15.0
     hooks:
     -   id: pyupgrade
 
 -   repo: https://github.com/psf/black
-    rev: 23.9.1
+    rev: 23.12.1
     hooks:
     - id: black-jupyter
 
@@ -38,7 +38,7 @@ repos:
       args: ["--write-changes", "--ignore-words-list", "hist,gaus"]
 
 -   repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.7.0
+    rev: 1.7.1
     hooks:
     - id: nbqa-pyupgrade
       additional_dependencies: [pyupgrade==3.14.0]
