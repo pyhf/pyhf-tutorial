@@ -11,6 +11,16 @@
 
 ## Setup
 
+### Using `pixi` (recommended)
+
+On any `x86` Linux machine or any macOS machine first install [`pixi`](https://pixi.sh/) and then from the top level of the repository run
+
+```
+pixi run start
+```
+
+### Using a manually controlled virtual environment
+
 In a Python virtual environment run the following
 
 ```
@@ -20,6 +30,14 @@ python -m pip install --require-hashes --requirement book/requirements.lock
 ## Build
 
 To build the book after setup simply run
+
+### Using `pixi`
+
+```
+pixi run build
+```
+
+### Local virtual environment
 
 ```
 make build

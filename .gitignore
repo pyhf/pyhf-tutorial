@@ -136,3 +136,7 @@ book/1Lbb-likelihoods/
 
 # Mac artifacts
 .DS_Store
+
+# pixi environments
+.pixi
+*.egg-info
