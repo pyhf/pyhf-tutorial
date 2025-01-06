@@ -10,6 +10,10 @@ version = "0.1.0"
 description = "Build the Jupyter Book"
 cmd = "jupyter-book build book/"
 
+[tasks.clean]
+description = "Remove the Jupyter Book build"
+cmd = "rm -rf book/_build"
+
 [tasks.start]
 description = "Launch Jupyer Lab and explore the user guide notebooks"
 cmd = "jupyter lab"
