@@ -30,6 +30,7 @@ Instead, let's move to looking at the `pyhf` API right away.
 $ pixi init
 $ pixi shell
 ```
+:::
 
 :::{tab-item} With venv
 ```
@@ -153,7 +154,7 @@ To get all the dependencies needed for this tutorial first clone the repository 
 (pyhf-tutorial) $ cd pyhf-tutorial
 ```
 
-#### Using pixi
+#### Using `pixi`
 
 Simply run
 
@@ -167,9 +168,9 @@ or to also start running the example notebooks run
 pixi run start
 ```
 
-#### Using pip
+#### Using `pip`
 
-then you can just install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
+Install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
 
 ```
 (pyhf-tutorial) $ python -m pip install --upgrade --requirement binder/requirements.txt
