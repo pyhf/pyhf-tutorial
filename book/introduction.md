@@ -25,11 +25,17 @@ Instead, let's move to looking at the `pyhf` API right away.
 
 ::::{tab-set}
 
-:::{tab-item} Locally
+:::{tab-item} With pixi
+```
+$ pixi init
+$ pixi shell
+```
+
+:::{tab-item} With venv
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip
 ```
 :::
 
@@ -48,7 +54,7 @@ Then we can go ahead and create the virtual environment
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip
 ```
 :::
 
@@ -67,7 +73,7 @@ Then we can go ahead and create the virtual environment
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip
 ```
 :::
 
@@ -92,7 +98,13 @@ If you haven't already, make a new Python 3 virtual environment and then install
 (pyhf-tutorial) $ python -m pip install pyhf
 ```
 
- or [Conda-forge](https://anaconda.org/conda-forge/pyhf)
+or from [conda-forge](https://anaconda.org/conda-forge/pyhf) using [`pixi`](https://pixi.sh/)
+
+```
+$ pixi add pyhf
+```
+
+or [`conda`](https://docs.conda.io/)
 
 ```
 (pyhf-tutorial) $ conda install --channel conda-forge pyhf
@@ -140,6 +152,22 @@ To get all the dependencies needed for this tutorial first clone the repository 
 (pyhf-tutorial) $ git clone https://github.com/pyhf/pyhf-tutorial.git
 (pyhf-tutorial) $ cd pyhf-tutorial
 ```
+
+#### Using pixi
+
+Simply run
+
+```
+pixi install
+```
+
+or to also start running the example notebooks run
+
+```
+pixi run start
+```
+
+#### Using pip
 
 then you can just install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
 
