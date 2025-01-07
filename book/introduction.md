@@ -133,12 +133,12 @@ If you're installing from PyPI, you can also install with some of the "extras" t
 The 'xmlio' extra additionally installs [`uproot`](https://github.com/scikit-hep/uproot4) to read `ROOT` files.
 :::
 
-:::{tab-item} Use PyTorch and Tensorflow
+:::{tab-item} Use PyTorch and JAX
 ```
-(pyhf-tutorial) $ python -m pip install 'pyhf[torch,tensorflow]'
+(pyhf-tutorial) $ python -m pip install 'pyhf[torch,jax]'
 ```
 
-The 'torch' extra installs [`pytorch`](https://pytorch.org/) and the 'tensorflow' extra installs [`tensorflow`](https://www.tensorflow.org/).
+The 'torch' extra installs [`pytorch`](https://pytorch.org/) and the 'jax' extra installs [`jax`](https://jax.readthedocs.io/).
 :::
 
 :::{tab-item} Using Minuit Optimization
