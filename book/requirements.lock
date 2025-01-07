@@ -1394,9 +1394,9 @@ pygments==2.19.1 \
     #   pydata-sphinx-theme
     #   rich
     #   sphinx
-pyhf==0.7.5 \
-    --hash=sha256:51aa26bb87c13f493221371e94e693528378779137499029801f99cc10d8d5b2 \
-    --hash=sha256:83a73f1f662c5be3aa15126351eb29c5154c000d87e2a5d9f0f9f9df20b1c28c
+pyhf==0.7.6 \
+    --hash=sha256:01b2401b9fdc53d94fa28256128c4898c380c64f71446f1695580fb18fba349d \
+    --hash=sha256:d41d9cdce5555863a77a37efd0784ad81d84b817295aa07ebc1cfa5ec50cc78c
     # via -r requirements.txt
 pyparsing==3.2.1 \
     --hash=sha256:506ff4f4386c4cec0590ec19e6302d3aedb992fdc02c761e90416f158dacf8e1 \
