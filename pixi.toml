@@ -4,7 +4,7 @@ channels = ["conda-forge"]
 description = "pyhf user guide"
 name = "pyhf-tutorial"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
-version = "0.1.0"
+version = "0.7.5"
 
 [tasks.build]
 description = "Build the Jupyter Book"
