@@ -40,6 +40,13 @@ $ source pyhf-tutorial/bin/activate
 ```
 :::
 
+:::{tab-item} With conda
+```
+$ conda create --name pyhf-tutorial --yes 'python=3.12'
+$ conda activate pyhf-tutorial
+```
+:::
+
 :::{tab-item} On CC7 lxplus/tier-3
 First we need to set up the 'views' with the right paths to ensure we use the correct `pip`
 
@@ -89,27 +96,39 @@ Not all parts of this user guide are able to run in Pyodide, but the pure Python
 
 ::::
 
-Once you have a virtual environment set up, you can use `source pyhf-tutorial/bin/activate` to get back into it again. Note the prefix `(pyhf-tutorial) $` on your command line, which indicates that you're inside a virtual environment named 'pyhf-tutorial'.
+Once you have a virtual environment set up, you can use `source pyhf-tutorial/bin/activate` to get back into it again (or `pixi shell` for `pixi`). Note the prefix `(pyhf-tutorial) $` on your command line, which indicates that you're inside a virtual environment named 'pyhf-tutorial'.
 
 ### Getting pyhf
 
-If you haven't already, make a new Python 3 virtual environment and then install `pyhf` from either [PyPI](https://pypi.org/project/pyhf/) with `pip`
+If you haven't already, make a new Python 3 virtual environment and then install `pyhf`
 
-```
-(pyhf-tutorial) $ python -m pip install pyhf
-```
+::::{tab-set}
 
-or from [conda-forge](https://anaconda.org/conda-forge/pyhf) using [`pixi`](https://pixi.sh/)
+:::{tab-item} pixi
+from [conda-forge](https://anaconda.org/conda-forge/pyhf) with [`pixi`](https://pixi.sh/)
 
 ```
 $ pixi add pyhf
 ```
+:::
 
-or [`conda`](https://docs.conda.io/)
+:::{tab-item} pip
+from [PyPI](https://pypi.org/project/pyhf/) with `pip`
+
+```
+(pyhf-tutorial) $ python -m pip install pyhf
+```
+:::
+
+:::{tab-item} conda
+from [conda-forge](https://anaconda.org/conda-forge/pyhf) with [`conda`](https://docs.conda.io/)
 
 ```
 (pyhf-tutorial) $ conda install --channel conda-forge pyhf
 ```
+:::
+
+::::
 
 ### Installation Extras
 
@@ -156,7 +175,7 @@ To get all the dependencies needed for this tutorial first clone the repository 
 
 #### Using `pixi`
 
-Simply run
+then simply run
 
 ```
 pixi install
@@ -170,7 +189,7 @@ pixi run start
 
 #### Using `pip`
 
-Install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
+then install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
 
 ```
 (pyhf-tutorial) $ python -m pip install --upgrade --requirement binder/requirements.txt
