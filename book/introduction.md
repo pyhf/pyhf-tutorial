@@ -25,49 +25,52 @@ Instead, let's move to looking at the `pyhf` API right away.
 
 ::::{tab-set}
 
-:::{tab-item} Locally
+:::{tab-item} With pixi
 ```
-$ python3 -m venv pyhf-tutorial
-$ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
-```
-:::
-
-:::{tab-item} On CC7 lxplus/tier-3
-First we need to set up the 'views' with the right paths to ensure we use the correct `pip`
-
-```
-$ export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
-$ source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
-$ lsetup "views LCG_98python3 x86_64-centos7-gcc8-opt"
-$ export PYTHONPATH=/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-centos7-gcc8-opt/python:/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-centos7-gcc8-opt/lib
-```
-
-Then we can go ahead and create the virtual environment
-
-```
-$ python3 -m venv pyhf-tutorial
-$ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
+$ pixi init
+$ pixi shell
 ```
 :::
 
-:::{tab-item} On SLC6 lxplus/tier-3
-First we need to set up the 'views' with the right paths to ensure we use the correct `pip`
-
-```
-$ export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
-$ source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
-$ lsetup "views LCG_98python3 x86_64-slc6-gcc8-opt"
-$ export PYTHONPATH=/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-slc6-gcc8-opt/python:/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-slc6-gcc8-opt/lib
-```
-
-Then we can go ahead and create the virtual environment
-
+:::{tab-item} With venv
 ```
 $ python3 -m venv pyhf-tutorial
 $ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip setuptools wheel
+(pyhf-tutorial) $ python -m pip install --upgrade pip
+```
+:::
+
+:::{tab-item} With conda
+```
+$ conda create --name pyhf-tutorial --yes 'python=3.12'
+$ conda activate pyhf-tutorial
+```
+:::
+
+:::{tab-item} On EL9 LXPLUS/tier-3
+First we need to set up the 'views' that [already have `pyhf` installed](https://lcginfo.cern.ch/pkg/pyhf/)
+
+```
+$ export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+$ . $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
+$ lsetup "views LCG_106 x86_64-el9-gcc13-opt"
+```
+
+Then we can install [`cvmfs-venv`](https://github.com/matthewfeickert/cvmfs-venv)
+
+```
+$ mkdir -p ~/.local/bin
+$ export PATH=~/.local/bin:"${PATH}"
+$ curl -sL https://raw.githubusercontent.com/matthewfeickert/cvmfs-venv/main/cvmfs-venv.sh -o ~/.local/bin/cvmfs-venv
+$ chmod +x ~/.local/bin/cvmfs-venv
+```
+
+and use it to create a user controlled virtual environment
+
+```
+$ cvmfs-venv pyhf-tutorial
+$ . pyhf-tutorial/bin/activate
+(pyhf-tutorial) $ uv pip install --upgrade pip
 ```
 :::
 
@@ -82,21 +85,39 @@ Not all parts of this user guide are able to run in Pyodide, but the pure Python
 
 ::::
 
-Once you have a virtual environment set up, you can use `source pyhf-tutorial/bin/activate` to get back into it again. Note the prefix `(pyhf-tutorial) $` on your command line, which indicates that you're inside a virtual environment named 'pyhf-tutorial'.
+Once you have a virtual environment set up, you can use `source pyhf-tutorial/bin/activate` to get back into it again (or `pixi shell` for `pixi`). Note the prefix `(pyhf-tutorial) $` on your command line, which indicates that you're inside a virtual environment named 'pyhf-tutorial'.
 
 ### Getting pyhf
 
-If you haven't already, make a new Python 3 virtual environment and then install `pyhf` from either [PyPI](https://pypi.org/project/pyhf/) with `pip`
+If you haven't already, make a new Python 3 virtual environment and then install `pyhf`
+
+::::{tab-set}
+
+:::{tab-item} pixi
+from [conda-forge](https://anaconda.org/conda-forge/pyhf) with [`pixi`](https://pixi.sh/)
+
+```
+$ pixi add pyhf
+```
+:::
+
+:::{tab-item} pip
+from [PyPI](https://pypi.org/project/pyhf/) with `pip`
 
 ```
 (pyhf-tutorial) $ python -m pip install pyhf
 ```
+:::
 
- or [Conda-forge](https://anaconda.org/conda-forge/pyhf)
+:::{tab-item} conda
+from [conda-forge](https://anaconda.org/conda-forge/pyhf) with [`conda`](https://docs.conda.io/)
 
 ```
 (pyhf-tutorial) $ conda install --channel conda-forge pyhf
 ```
+:::
+
+::::
 
 ### Installation Extras
 
@@ -141,7 +162,23 @@ To get all the dependencies needed for this tutorial first clone the repository 
 (pyhf-tutorial) $ cd pyhf-tutorial
 ```
 
-then you can just install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
+#### Using `pixi`
+
+then simply run
+
+```
+pixi install
+```
+
+or to also start running the example notebooks run
+
+```
+pixi run start
+```
+
+#### Using `pip`
+
+then install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
 
 ```
 (pyhf-tutorial) $ python -m pip install --upgrade --requirement binder/requirements.txt
