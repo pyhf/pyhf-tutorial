@@ -6,14 +6,6 @@ name = "pyhf-tutorial"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 version = "0.7.5"
 
-[tasks.build]
-description = "Build the Jupyter Book"
-cmd = "jupyter-book build book/"
-
-[tasks.clean]
-description = "Remove the Jupyter Book build"
-cmd = "rm -rf book/_build"
-
 [tasks.start]
 description = "Launch Jupyer Lab and explore the user guide notebooks"
 cmd = "jupyter lab"
@@ -34,4 +26,17 @@ rich = ">=13.9.4,<14"
 # jupyter notebooks
 notebook = ">=7.3.2,<8"
 jupyterlab = ">=4.3.4,<5"
+
+[feature.book.dependencies]
 jupyter-book = "0.15.1.*"
+
+[feature.book.tasks.build]
+description = "Build the Jupyter Book"
+cmd = "jupyter-book build book/"
+
+[feature.book.tasks.clean]
+description = "Remove the Jupyter Book build"
+cmd = "rm -rf book/_build"
+
+[environments]
+book = ["book"]
