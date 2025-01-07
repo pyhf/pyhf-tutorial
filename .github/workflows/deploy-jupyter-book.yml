@@ -21,19 +21,19 @@ jobs:
 
   build-book:
     runs-on: ubuntu-latest
-    container: atlasamglab/stats-base:root6.28.04
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip setuptools wheel
-        python -m pip install --no-deps --require-hashes --requirement book/requirements.lock
+    - name: Set up pixi
+      uses: prefix-dev/setup-pixi@v0.8.1
+      with:
+        cache: true
+        cache-write: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
 
-    - name: List installed Python packages
+    - name: List installed packages
       run: |
-        python -m pip list
+        pixi list --environment book
 
     - name: Set track_progress=False for notebooks
       run: |
@@ -42,7 +42,7 @@ jobs:
 
     - name: Build the book
       run: |
-        jupyter-book build book/
+        pixi run build
 
     - name: Upload jupyter book
       uses: actions/upload-artifact@v3
