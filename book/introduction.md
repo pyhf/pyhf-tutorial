@@ -47,41 +47,30 @@ $ conda activate pyhf-tutorial
 ```
 :::
 
-:::{tab-item} On CC7 lxplus/tier-3
-First we need to set up the 'views' with the right paths to ensure we use the correct `pip`
+:::{tab-item} On EL9 LXPLUS/tier-3
+First we need to set up the 'views' that [already have `pyhf` installed](https://lcginfo.cern.ch/pkg/pyhf/)
 
 ```
 $ export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
-$ source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
-$ lsetup "views LCG_98python3 x86_64-centos7-gcc8-opt"
-$ export PYTHONPATH=/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-centos7-gcc8-opt/python:/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-centos7-gcc8-opt/lib
+$ . $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
+$ lsetup "views LCG_106 x86_64-el9-gcc13-opt"
 ```
 
-Then we can go ahead and create the virtual environment
+Then we can install [`cvmfs-venv`](https://github.com/matthewfeickert/cvmfs-venv)
 
 ```
-$ python3 -m venv pyhf-tutorial
-$ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip
-```
-:::
-
-:::{tab-item} On SLC6 lxplus/tier-3
-First we need to set up the 'views' with the right paths to ensure we use the correct `pip`
-
-```
-$ export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
-$ source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh
-$ lsetup "views LCG_98python3 x86_64-slc6-gcc8-opt"
-$ export PYTHONPATH=/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-slc6-gcc8-opt/python:/cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-slc6-gcc8-opt/lib
+$ mkdir -p ~/.local/bin
+$ export PATH=~/.local/bin:"${PATH}"
+$ curl -sL https://raw.githubusercontent.com/matthewfeickert/cvmfs-venv/main/cvmfs-venv.sh -o ~/.local/bin/cvmfs-venv
+$ chmod +x ~/.local/bin/cvmfs-venv
 ```
 
-Then we can go ahead and create the virtual environment
+and use it to create a user controlled virtual environment
 
 ```
-$ python3 -m venv pyhf-tutorial
-$ source pyhf-tutorial/bin/activate
-(pyhf-tutorial) $ python -m pip install --upgrade pip
+$ cvmfs-venv pyhf-tutorial
+$ . pyhf-tutorial/bin/activate
+(pyhf-tutorial) $ uv pip install --upgrade pip
 ```
 :::
 
