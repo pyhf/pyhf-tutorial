@@ -13,14 +13,13 @@ DIR = Path(__file__).parent.resolve()
 @nox.session(reuse_venv=True)
 def lock(session: nox.Session) -> None:
     """
-    Build a lock file with pip-tools
+    Build a lock file with uv pip compile
 
     Examples:
 
         $ nox --session lock
     """
-    session.install("--upgrade", "pip", "setuptools", "wheel")
-    session.install("--upgrade", "pip-tools")
+    session.install("--upgrade", "uv")
     out = session.run(
         "cat",
         f"{DIR / 'binder' / 'requirements.txt'}",
@@ -33,11 +32,11 @@ def lock(session: nox.Session) -> None:
         out_file.write(out.strip() + "\n")
 
     session.run(
-        "pip-compile",
-        "--resolver=backtracking",
+        "uv",
+        "pip",
+        "compile",
         "--generate-hashes",
-        "--output-file",
-        "book/requirements.lock",
+        "--output-file=book/requirements.lock",
         intermediate_requirements.name,
     )
     if intermediate_requirements.exists():
@@ -47,7 +46,7 @@ def lock(session: nox.Session) -> None:
 @nox.session(venv_backend="none")
 def docker(session: nox.Session) -> None:
     """
-    Build a lock file with pip-tools using Docker
+    Build a lock file with uv pip compile using Docker
 
     Examples:
 
