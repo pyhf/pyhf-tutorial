@@ -70,6 +70,7 @@ jobs:
       run: |
         uv pip install --system --upgrade \
           "jupyterlite[lab]" \
+          "jupyterlite-pyodide-kernel>=0.4.7" \
           "jupytext>=1.14.0"
 
     - name: List installed Python packages
