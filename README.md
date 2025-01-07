@@ -45,7 +45,7 @@ make build
 
 ## Build lock file
 
-To build a `pip-compile` lock file for local use `nox`
+To build a `uv pip compile` lock file for local use `nox`
 
 ```
 nox
