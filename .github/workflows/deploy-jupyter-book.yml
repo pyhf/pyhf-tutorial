@@ -80,7 +80,7 @@ jobs:
     - name: Convert .py to notebook
       run: |
         jupytext --to notebook lite/jupyterlite.py
-        cp lite/*.ipynb  book/
+        cp lite/*.ipynb book/
 
     - name: Build the Pyodide output
       run: |

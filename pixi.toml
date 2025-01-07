@@ -46,7 +46,7 @@ root_base = ">=6.32.2,<7"
 description = "Build JupyterLite version of book"
 cmd = """
 jupytext --to notebook lite/jupyterlite.py && \
-cp lite/*.ipynb  book/ && \
+mv lite/*.ipynb  book/ && \
 jupyter lite init && \
 jupyter lite build --contents=book && \
 jupyter lite check
@@ -60,8 +60,7 @@ cmd = "jupyter lite serve"
 description = "Remove the JupyterLite outputs"
 cmd = """
 rm -rf .jupyterlite.doit.db _output && \
-rm -rf book/jupyterlite.ipynb && \
-rm -rf lite/jupyterlite.ipynb
+rm -rf book/jupyterlite.ipynb
 """
 
 [feature.jupyterlite.dependencies]
