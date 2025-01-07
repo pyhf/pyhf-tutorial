@@ -27,13 +27,6 @@ rich = ">=13.9.4,<14"
 notebook = ">=7.3.2,<8"
 jupyterlab = ">=4.3.4,<5"
 
-[feature.book.dependencies]
-jupyter-book = "0.15.1.*"
-
-# macOS support for ROOT is currently not good
-[feature.book.target.linux-64.dependencies]
-root_base = ">=6.32.2,<7"
-
 [feature.book.tasks.build]
 description = "Build the Jupyter Book"
 cmd = "jupyter-book build book/"
@@ -41,6 +34,13 @@ cmd = "jupyter-book build book/"
 [feature.book.tasks.clean]
 description = "Remove the Jupyter Book build"
 cmd = "rm -rf book/_build"
+
+[feature.book.dependencies]
+jupyter-book = "0.15.1.*"
+
+# macOS support for ROOT is currently not good
+[feature.book.target.linux-64.dependencies]
+root_base = ">=6.32.2,<7"
 
 [environments]
 book = ["book"]
