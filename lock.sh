@@ -25,7 +25,7 @@ docker run \
         && mkdir -p book \
         && uv pip compile \
             --generate-hashes \
-            --output-file=book/requirements.lock
+            --output-file=book/requirements.lock \
             requirements.txt \
         && cp book/requirements.lock /write \
         "
