@@ -6,7 +6,7 @@
 [![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://pyhf.github.io/pyhf-tutorial/live/lab/index.html?path=jupyterlite.ipynb)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4670321.svg)](https://doi.org/10.5281/zenodo.4670321)
 
-[![Deploy Jupyter Book](https://github.com/pyhf/pyhf-tutorial/workflows/Deploy%20Jupyter%20Book/badge.svg?branch=main)](https://pyhf.github.io/pyhf-tutorial/)
+[![Deploy Jupyter Book](https://github.com/pyhf/pyhf-tutorial/actions/workflows/deploy-jupyter-book.yml/badge.svg)](https://pyhf.github.io/pyhf-tutorial/)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/pyhf/pyhf-tutorial/main.svg)](https://results.pre-commit.ci/latest/github/pyhf/pyhf-tutorial/main)
 
 ## Setup
