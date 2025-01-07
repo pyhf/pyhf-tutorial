@@ -6,8 +6,7 @@ if [[ "$(uname -m)" != "x86_64" ]]; then
     docker run --privileged --rm tonistiigi/binfmt --install amd64
 fi
 
-# Match CPython version with Docker image that contians ROOT
-BUILD_IMAGE="python:3.10-slim-bookworm"
+BUILD_IMAGE="python:3.12-slim-bookworm"
 docker pull \
     --platform linux/amd64 \
     "${BUILD_IMAGE}"
@@ -21,14 +20,12 @@ docker run \
     "${BUILD_IMAGE}" \
     /bin/bash -c "\
         python -m venv venv && . venv/bin/activate \
-        && python -m pip install --upgrade pip wheel \
-        && python -m pip install pip-tools \
+        && python -m pip --no-cache-dir install --upgrade uv \
         && cat /read/binder/requirements.txt /read/book/requirements.txt > requirements.txt \
         && mkdir -p book \
-        && pip-compile \
-            --resolver=backtracking \
+        && uv pip compile \
             --generate-hashes \
-            --output-file book/requirements.lock \
+            --output-file=book/requirements.lock \
             requirements.txt \
         && cp book/requirements.lock /write \
         "
