@@ -70,6 +70,7 @@ jobs:
       run: |
         uv pip install --system --upgrade \
           "jupyterlite[lab]" \
+          "jupyterlite-pyodide-kernel>=0.4.7" \
           "jupytext>=1.14.0"
 
     - name: List installed Python packages
@@ -79,7 +80,7 @@ jobs:
     - name: Convert .py to notebook
       run: |
         jupytext --to notebook lite/jupyterlite.py
-        cp lite/*.ipynb  book/
+        cp lite/*.ipynb book/
 
     - name: Build the Pyodide output
       run: |
