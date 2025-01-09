@@ -51,10 +51,13 @@ jupyter lite init && \
 jupyter lite build --contents=book && \
 jupyter lite check
 """
+inputs = ["lite/jupyterlite.py"]
+outputs = ["_output"]
 
 [feature.jupyterlite.tasks.serve]
 description = "Serve the built JupyterLite page"
 cmd = "jupyter lite serve"
+depends-on = ["build-lite"]
 
 [feature.jupyterlite.tasks.clean-lite]
 description = "Remove the JupyterLite outputs"
@@ -64,8 +67,8 @@ rm -rf book/jupyterlite.ipynb
 """
 
 [feature.jupyterlite.dependencies]
-jupyterlite = ">=0.4.5,<0.5"
-jupyterlite-pyodide-kernel = ">=0.4.7,<0.5"
+jupyterlite = ">=0.5.0,<0.6"
+jupyterlite-pyodide-kernel = ">=0.5.0,<0.6"
 jupytext = ">=1.16.6,<2"
 
 [environments]
