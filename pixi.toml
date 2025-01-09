@@ -51,10 +51,13 @@ jupyter lite init && \
 jupyter lite build --contents=book && \
 jupyter lite check
 """
+inputs = ["lite/jupyterlite.py"]
+outputs = ["_output"]
 
 [feature.jupyterlite.tasks.serve]
 description = "Serve the built JupyterLite page"
 cmd = "jupyter lite serve"
+depends-on = ["build-lite"]
 
 [feature.jupyterlite.tasks.clean-lite]
 description = "Remove the JupyterLite outputs"
