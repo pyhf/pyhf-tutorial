@@ -12,5 +12,3 @@ updates:
     labels:
       - "github-actions"
       - "dependencies"
-    reviewers:
-      - "matthewfeickert"
