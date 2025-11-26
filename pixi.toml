@@ -36,7 +36,7 @@ description = "Remove the Jupyter Book build"
 cmd = "rm -rf book/_build"
 
 [feature.book.dependencies]
-jupyter-book = "0.15.1.*"
+jupyter-book = ">=2.0.2,<3"
 
 # macOS support for ROOT is currently not good
 [feature.book.target.linux-64.dependencies]
