@@ -6,7 +6,7 @@ name = "pyhf-tutorial"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 version = "0.7.6"
 
-[tasks.start]
+[tasks.lab]
 description = "Launch Jupyer Lab and explore the user guide notebooks"
 cmd = "jupyter lab"
 
@@ -37,7 +37,7 @@ description = "Remove the Jupyter Book build"
 cmd = "jupyter-book clean && rm -rf ./_build"
 cwd = "book"
 
-[feature.book.tasks.start-book]
+[feature.book.tasks.start]
 description = "Serve the Jupyter Book as a website"
 cmd = "jupyter-book start"
 cwd = "book"
