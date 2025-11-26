@@ -6,10 +6,6 @@ name = "pyhf-tutorial"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 version = "0.7.6"
 
-[tasks.lab]
-description = "Launch Jupyer Lab and explore the user guide notebooks"
-cmd = "jupyter lab"
-
 [dependencies]
 python = ">=3.13.9,<3.15"
 pyhf = "0.7.6.*"
@@ -23,9 +19,14 @@ ipympl = ">=0.9.8,<0.10"
 pandas = ">=2.3.3,<3"
 altair = ">=6.0.0,<7"
 rich = ">=14.2.0,<15"
-# jupyter notebooks
+
+[feature.lab.dependencies]
 notebook = ">=7.5.0,<8"
 jupyterlab = ">=4.5.0,<5"
+
+[feature.lab.tasks.lab]
+description = "Launch Jupyer Lab and explore the user guide notebooks"
+cmd = "jupyter lab"
 
 [feature.book.tasks.build]
 description = "Build the Jupyter Book"
@@ -79,5 +80,6 @@ jupyterlite-pyodide-kernel = ">=0.6.1,<0.7"
 jupytext = ">=1.18.1,<2"
 
 [environments]
+lab = ["lab"]
 book = ["book"]
 jupyterlite = ["jupyterlite"]
