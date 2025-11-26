@@ -29,11 +29,18 @@ jupyterlab = ">=4.5.0,<5"
 
 [feature.book.tasks.build]
 description = "Build the Jupyter Book"
-cmd = "jupyter-book build book/"
+cmd = "jupyter-book build"
+cwd = "book"
 
 [feature.book.tasks.clean]
 description = "Remove the Jupyter Book build"
-cmd = "rm -rf book/_build"
+cmd = "jupyter-book clean && rm -rf ./_build"
+cwd = "book"
+
+[feature.book.tasks.start-book]
+description = "Serve the Jupyter Book as a website"
+cmd = "jupyter-book start"
+cwd = "book"
 
 [feature.book.dependencies]
 jupyter-book = ">=2.0.2,<3"
