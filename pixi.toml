@@ -7,8 +7,8 @@ platforms = ["linux-64", "osx-64", "osx-arm64"]
 version = "0.7.6"
 
 [dependencies]
-python = ">=3.13.9,<3.15"
-pyhf = "0.7.6.*"
+python = ">=3.13.9,<3.14"
+pyhf = "0.7.6.*
 uproot = ">=5.6.8,<6"
 iminuit = ">=2.32.0,<3"
 matplotlib-base = ">=3.10.8,<4"
@@ -19,6 +19,8 @@ ipympl = ">=0.9.8,<0.10"
 pandas = ">=2.3.3,<3"
 altair = ">=6.0.0,<7"
 rich = ">=14.2.0,<15"
+# comparison
+root_base = ">=6.36.4,<7"
 
 [feature.lab.dependencies]
 notebook = ">=7.5.0,<8"
@@ -45,10 +47,6 @@ cwd = "book"
 
 [feature.book.dependencies]
 jupyter-book = ">=2.0.2,<3"
-
-# macOS support for ROOT is currently not good
-[feature.book.target.linux-64.dependencies]
-root_base = ">=6.36.4,<7"
 
 [feature.jupyterlite.tasks.build-lite]
 description = "Build JupyterLite version of book"
