@@ -4,12 +4,12 @@ project:
   authors:
     - name: the pyhf development team
   github: pyhf/pyhf-tutorial
-  thebe:
+  jupyter:
     binder:
       repo: pyhf/pyhf-tutorial
-      provider: github
-      url: https://mybinder.org
       ref: main
+      provider: github
+      url: mybinder.org
   exports:
     - format: pdf
       template: plain_latex_book
