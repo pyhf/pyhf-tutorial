@@ -22,6 +22,10 @@ jobs:
   build-book:
     runs-on: ubuntu-latest
 
+    env:
+      # Set BASE_URL required for build --html
+      BASE_URL: /${{ github.event.repository.name }}
+
     steps:
     - uses: actions/checkout@v6
 
