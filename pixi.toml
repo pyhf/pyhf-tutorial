@@ -21,6 +21,7 @@ altair = ">=6.0.0,<7"
 rich = ">=14.2.0,<15"
 # comparison
 root_base = ">=6.36.4,<7"
+jq = ">=1.8.1,<2"
 
 [feature.lab.dependencies]
 notebook = ">=7.5.0,<8"

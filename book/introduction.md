@@ -178,13 +178,7 @@ pixi run start
 
 #### Using `pip`
 
-then install from the included `requirements.txt` in the top level `binder/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
-
-```
-(pyhf-tutorial) $ python -m pip install --upgrade --requirement binder/requirements.txt
-```
-
-If you want to also get the dependencies to build and explore the Jupyter Book form of the tutorial you can install them with
+then install from the included `requirements.txt` in the top level `book/` directory of [the source repository](https://github.com/pyhf/pyhf-tutorial)
 
 ```
 (pyhf-tutorial) $ python -m pip install --upgrade --requirement book/requirements.txt
