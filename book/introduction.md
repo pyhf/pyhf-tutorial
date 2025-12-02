@@ -167,13 +167,13 @@ To get all the dependencies needed for this tutorial first clone the repository 
 then simply run
 
 ```
-pixi install
+pixi install --environment lab
 ```
 
 or to also start running the example notebooks run
 
 ```
-pixi run start
+pixi run --environment lab lab
 ```
 
 #### Using `pip`
