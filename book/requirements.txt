@@ -1,1 +1,12 @@
-jupyter-book==0.15.1
+pyhf[xmlio,minuit,contrib]==0.7.6
+# visualization
+ipywidgets~=8.1.8
+ipympl~=0.9.8
+pandas~=2.3.3
+altair~=6.0.0
+rich==14.2.0
+# jupyter notebooks
+notebook>=7.0.0
+jupyterlab>=4.0.3
+# book
+jupyter-book==2.0.2

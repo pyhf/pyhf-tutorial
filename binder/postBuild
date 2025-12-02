@@ -1,11 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-set -e
+set -ex
 
-# Make ROOT available for comparisons and workspace use
-# c.f. https://github.com/conda-forge/root-feedstock
-conda config --add channels conda-forge
-conda config --set channel_priority strict
+# Install Pixi
+curl -fsSL https://pixi.sh/install.sh | sh
+echo 'eval "$(pixi completion --shell bash)"' >> ~/.bashrc
+. ~/.bashrc
+# Sourcing ~/.bashrc doesn't seem to pick up changes, so manually set PATH
+export PATH="~/.pixi/bin:${PATH}"
 
-# Use mamba to speed up install
-mamba install --yes root_base
+# Export workspace to conda explicit spec
+pixi workspace export conda-explicit-spec --platform linux-64 binder/
+
+# Install environment
+mamba install --name notebook --file binder/default_linux-64_conda_spec.txt
