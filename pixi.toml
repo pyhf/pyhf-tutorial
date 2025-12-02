@@ -32,7 +32,8 @@ cmd = "jupyter lab"
 
 [feature.book.tasks.build]
 description = "Build the Jupyter Book"
-cmd = "jupyter-book build"
+args = [{"arg" = "OPTION", "default" = "--html"}]
+cmd = "jupyter-book build {{ OPTION }}"
 cwd = "book"
 
 [feature.book.tasks.clean]
