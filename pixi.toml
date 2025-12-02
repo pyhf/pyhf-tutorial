@@ -8,7 +8,7 @@ version = "0.7.6"
 
 [dependencies]
 python = ">=3.13.9,<3.14"
-pyhf = "0.7.6.*
+pyhf = "0.7.6.*"
 uproot = ">=5.6.8,<6"
 iminuit = ">=2.32.0,<3"
 matplotlib-base = ">=3.10.8,<4"
