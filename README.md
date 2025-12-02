@@ -34,8 +34,10 @@ To build the book after setup simply run
 ### Using `pixi`
 
 ```
-pixi run build
+pixi run start
 ```
+
+to build and serve the book
 
 ### Local virtual environment
 

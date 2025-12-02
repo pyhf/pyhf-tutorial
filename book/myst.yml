@@ -1,0 +1,43 @@
+version: 1
+project:
+  title: pyhf Tutorial
+  authors:
+    - name: the pyhf development team
+  github: pyhf/pyhf-tutorial
+  jupyter:
+    binder:
+      repo: pyhf/pyhf-tutorial
+      ref: main
+      provider: github
+      url: mybinder.org
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: introduction.md
+    - title: Get started
+      children:
+        - file: HelloWorld.ipynb
+        - file: SimpleWorkspace.ipynb
+        - file: SerializationAndPatching.ipynb
+    - title: Common use and applications
+      children:
+        - file: PullPlot.ipynb
+        - file: Toys.ipynb
+        - file: Combinations.ipynb
+        - file: UpperLimitsTable.ipynb
+    - title: More Information
+      children:
+        - file: IntroToHiFa.ipynb
+        - file: WorkspaceManipulations.ipynb
+        - file: Modifiers.ipynb
+        - file: UsingCalculators.ipynb
+    - title: Learn Fundamentals
+      children:
+        - file: InterpolationCodes.ipynb
+site:
+  options:
+    logo: assets/pyhf-logo.svg
+    folders: true
+  template: book-theme
