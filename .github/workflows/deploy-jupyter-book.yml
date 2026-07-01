@@ -27,10 +27,10 @@ jobs:
       BASE_URL: /${{ github.event.repository.name }}
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
     - name: Set up pixi
-      uses: prefix-dev/setup-pixi@v0.9.6
+      uses: prefix-dev/setup-pixi@v0.10.0
       with:
         cache: true
         cache-write: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
     - name: Set up Python
       uses: actions/setup-python@v6
